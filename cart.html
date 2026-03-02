@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cookies Policy | Afia Borka House</title>
-  <meta name="description" content="Read how Afia Borka House uses cookies and similar technologies to improve your browsing and shopping experience." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart | Afia Borka House</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .cart-page { padding: 40px 0; background: #f8fafc; min-height: 60vh; }
+    .cart-container { max-width: 1260px; margin: 0 auto; padding: 0 20px; }
+    .cart-card { background: #fff; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 12px rgba(0,0,0,0.03); overflow: hidden; }
+    .cart-table th { background: #f9fafb; color: #4b5563; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #e5e7eb; padding: 15px; }
+    .cart-table td { padding: 20px 15px; vertical-align: middle; border-bottom: 1px solid #f3f4f6; }
+    .cart-item-img { width: 80px; height: 100px; object-fit: cover; border-radius: 8px; border: 1px solid #f3f4f6; }
+    .cart-item-name { font-weight: 600; color: #111827; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .cart-item-name:hover { color: var(--blue); }
+    .cart-item-meta { font-size: 12px; color: #6b7280; margin-top: 4px; }
+    .quantity-control { display: flex; align-items: center; border: 1.5px solid #e5e7eb; border-radius: 6px; width: fit-content; overflow: hidden; }
+    .qty-btn { background: #fff; border: none; padding: 6px 12px; cursor: pointer; color: #4b5563; transition: background 0.2s; }
+    .qty-btn:hover { background: #f3f4f6; }
+    .qty-input { width: 40px; border: none; text-align: center; font-size: 13px; font-weight: 600; background: #fff; outline: none; border-left: 1.5px solid #e5e7eb; border-right: 1.5px solid #e5e7eb; }
+    .remove-btn { color: #ef4444; background: none; border: none; font-size: 18px; cursor: pointer; transition: transform 0.2s; }
+    .remove-btn:hover { transform: scale(1.1); }
+    .cart-summary { background: #fff; border-radius: 12px; border: 1px solid #e5e7eb; padding: 24px; position: sticky; top: 130px; }
+    .summary-title { font-size: 18px; font-weight: 700; color: #111827; margin-bottom: 20px; border-bottom: 1.5px solid #f3f4f6; padding-bottom: 12px; }
+    .summary-row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; color: #4b5563; }
+    .summary-row.total { font-size: 18px; font-weight: 800; color: #111827; margin-top: 16px; padding-top: 16px; border-top: 1.5px solid #f3f4f6; }
+    .checkout-btn { width: 100%; background: var(--blue); color: #fff; border: none; border-radius: 8px; padding: 14px; font-weight: 700; font-size: 15px; margin-top: 24px; transition: all 0.2s; }
+    .checkout-btn:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(26, 93, 200, 0.2); }
+    .coupon-wrap { display: flex; gap: 8px; margin-top: 20px; }
+    .coupon-input { flex: 1; border: 1.5px solid #e5e7eb; border-radius: 6px; padding: 8px 12px; font-size: 13px; outline: none; }
+    .coupon-btn { background: #374151; color: #fff; border: none; border-radius: 6px; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .coupon-btn:hover { background: #111827; }
+    @media (max-width: 991px) { .cart-table-wrap { overflow-x: auto; } .cart-summary { margin-top: 24px; position: static; } }
+  </style>
 </head>
-
+<body>
 <body class="pp-body">
 <!-- TOP HEADER -->
 <header class="top-header">
@@ -346,62 +372,120 @@
     </div>
   </nav>
 
-<!-- BREADCRUMB -->
-<div class="pp-breadcrumb">
-  <div class="bc-inner">
-    <a href="index.html">Home</a>
-    <span class="sep">/</span>
-    <span class="current">Cookies Policy</span>
-  </div>
-</div>
-
-<!-- PAGE CONTENT -->
-<div class="pp-page">
-  <div class="pp-card">
-    <h1>Cookies Policy</h1>
-
-    <p>This Cookies Policy explains how Afia Borka House (we, us or our) uses cookies and similar technologies when you visit our website or use our services.</p>
-
-    <h2>1. What Are Cookies?</h2>
-    <p>Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They help the site recognize your device, remember your preferences, and improve your overall browsing experience.</p>
-
-    <h2>2. How We Use Cookies</h2>
-    <p>We use cookies to:</p>
-    <ul>
-      <li>Remember items added to your shopping cart.</li>
-      <li>Keep you signed in to your account where applicable.</li>
-      <li>Save your language, region, and display preferences.</li>
-      <li>Understand how visitors use our website so we can improve layout, content, and performance.</li>
-      <li>Display relevant offers and promotions.</li>
-    </ul>
-
-    <h2>3. Types of Cookies We Use</h2>
-    <p><strong>Essential cookies:</strong> Required for core site functionality such as navigating pages, accessing secure areas, and processing orders.</p>
-    <p><strong>Performance &amp; analytics cookies:</strong> Help us understand how visitors interact with the site (for example, which pages are visited most often).</p>
-    <p><strong>Functionality cookies:</strong> Remember your preferences, such as saved addresses or recently viewed items, to personalize your experience.</p>
-    <p><strong>Advertising cookies (if used):</strong> May be used to show you relevant ads based on your interests. If enabled in the future, details will be updated in this policy.</p>
-
-    <h2>4. Thirdâ€‘Party Cookies</h2>
-    <p>Some cookies may be set by thirdâ€‘party service providers, such as analytics tools or embedded content (e.g., videos, social media widgets). These providers have their own privacy and cookies policies, which we recommend reviewing separately.</p>
-
-    <h2>5. Managing Cookies</h2>
-    <p>Most web browsers allow you to control cookies through their settings. You can choose to block or delete cookies, or to receive a warning before a cookie is stored. Please note that disabling certain cookies may affect site functionality, such as login, cart, or checkout features.</p>
-
-    <h2>6. Cookies and Personal Data</h2>
-    <p>Some cookies may collect information that can be considered personal data, such as IP address or unique device identifiers. Any personal data collected through cookies is handled in accordance with our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-
-    <h2>7. Changes to This Cookies Policy</h2>
-    <p>We may update this Cookies Policy from time to time to reflect changes in technology, law, or our services. Any updates will be posted on this page with an updated effective date.</p>
-
-    <h2>8. Contact Us</h2>
-    <p>If you have any questions about how we use cookies, please contact us at
-      <a href="mailto:support@afiaborkahouse.com">support@afiaborkahouse.com</a>.</p>
-
-    <div class="pp-contact-block">
-      <strong>Afia Borka House</strong><br />
-      Avenue #02, Road #14, House No #966, Mirpur DOHS, DHAKA-1216, Bangladesh.<br />
-      Phone: +88-01885-998899<br />
-      Email: <a href="mailto:support@afiaborkahouse.com">support@afiaborkahouse.com</a>
+<div class="cart-page">
+  <div class="cart-container">
+    <h2 class="mb-4 fw-bold" style="color: #111827;">Shopping Cart</h2>
+    
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="cart-card">
+          <div class="cart-table-wrap">
+            <table class="table cart-table mb-0">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Subtotal</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img src="https://images.unsplash.com/photo-1614086138746-9d63b4c4b2b7?w=200&h=260&fit=crop" class="cart-item-img" alt="Product">
+                      <div class="ms-3">
+                        <a href="products.html" class="cart-item-name">Mens Panjabi - Regular Fit</a>
+                        <p class="cart-item-meta">Color: Black | Size: L</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="fw-semibold">Tk. 2990</span></td>
+                  <td>
+                    <div class="quantity-control">
+                      <button class="qty-btn">-</button>
+                      <input type="text" class="qty-input" value="1">
+                      <button class="qty-btn">+</button>
+                    </div>
+                  </td>
+                  <td><span class="fw-bold" style="color: var(--blue);">Tk. 2990</span></td>
+                  <td class="text-end">
+                    <button class="remove-btn"><i class="bi bi-trash3"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=200&h=260&fit=crop" class="cart-item-img" alt="Product">
+                      <div class="ms-3">
+                        <a href="products.html" class="cart-item-name">Womens Ethnic 3 Pcs</a>
+                        <p class="cart-item-meta">Color: Maroon | Size: M</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="fw-semibold">Tk. 6690</span></td>
+                  <td>
+                    <div class="quantity-control">
+                      <button class="qty-btn">-</button>
+                      <input type="text" class="qty-input" value="1">
+                      <button class="qty-btn">+</button>
+                    </div>
+                  </td>
+                  <td><span class="fw-bold" style="color: var(--blue);">Tk. 6690</span></td>
+                  <td class="text-end">
+                    <button class="remove-btn"><i class="bi bi-trash3"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="mt-4 d-flex justify-content-between">
+          <a href="index.html" class="btn btn-outline-secondary px-4 py-2 small fw-bold" style="font-size: 13px; border-radius: 8px;">
+            <i class="bi bi-arrow-left me-2"></i>Continue Shopping
+          </a>
+          <button class="btn btn-outline-danger px-4 py-2 small fw-bold" style="font-size: 13px; border-radius: 8px;">
+            Clear Cart
+          </button>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="cart-summary">
+          <h3 class="summary-title">Order Summary</h3>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span class="fw-bold">Tk. 9680</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping Cost</span>
+            <span class="fw-bold">Tk. 60</span>
+          </div>
+          <div class="summary-row">
+            <span>Discount</span>
+            <span class="text-success fw-bold">- Tk. 0</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span>Tk. 9740</span>
+          </div>
+          
+          <div class="coupon-wrap">
+            <input type="text" class="coupon-input" placeholder="Coupon Code">
+            <button class="coupon-btn">Apply</button>
+          </div>
+          
+          <button class="checkout-btn">Proceed to Checkout</button>
+          
+          <div class="mt-4 text-center small text-muted">
+            <p class="mb-1"><i class="bi bi-shield-check me-2" style="color: #059669;"></i>Secure Checkout</p>
+            <p class="mb-1"><i class="bi bi-truck me-2" style="color: #1a5dc8;"></i>Delivery inside Dhaka (2-3 days)</p>
+            <p class="mb-1"><i class="bi bi-truck me-2" style="color: #1a5dc8;"></i>Delivery outside Dhaka (3-5 days)</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -428,11 +512,10 @@
         </div>
         <div class="d-flex mb-2 small text-muted">
           <i class="bi bi-envelope-fill me-2" style="color:#1a5dc8;font-size:14px;margin-top:2px;"></i>
-          <a href="mailto:support@afiaborkahouse.com"
-             style="color:#2563eb;text-decoration:none;">support@afiaborkahouse.com</a>
+          <a href="mailto:support@afiaborkahouse.com" style="color:#2563eb;text-decoration:none;">support@afiaborkahouse.com</a>
         </div>
         <div class="small text-muted mt-1">
-          DBID Number: <strong>204425796</strong><br />
+          DBID Number: <strong>204425796</strong><br/>
           D-U-N-S Number: <strong>731962671</strong>
         </div>
       </div>
@@ -467,7 +550,7 @@
         <ul class="list-unstyled mb-0 small">
           <li class="mb-1"><a href="faq.html" style="color:#6b7280;text-decoration:none;">FAQs</a></li>
           <li class="mb-1"><a href="privacy-policy.html" style="color:#6b7280;text-decoration:none;">Privacy Policy</a></li>
-          <li class="mb-1"><a href="cookies-policy.html" style="color:#1a5dc8;text-decoration:none;font-weight:500;">Cookies Policy</a></li>
+          <li class="mb-1"><a href="cookies-policy.html" style="color:#6b7280;text-decoration:none;">Cookies Policy</a></li>
           <li class="mb-1"><a href="terms.html" style="color:#6b7280;text-decoration:none;">Terms &amp; Conditions</a></li>
           <li class="mb-1"><a href="replacement.html" style="color:#6b7280;text-decoration:none;">Replacement Policy</a></li>
         </ul>
@@ -495,54 +578,20 @@
     </div>
   </div>
   <div class="text-center py-2 small text-muted" style="border-top:1px solid #e5e7eb;">
-    &copy; 2026 Afia Borka House All Rights Reserved.
+    &copy; 2026 Afia Borka House All Rights Reserved
   </div>
 </footer>
-
-<button class="float-chat" title="Chat"><i class="bi bi-chat-dots-fill"></i></button>
 
 <nav class="mobile-bottom-nav">
   <div class="mob-nav-items">
     <a href="index.html" class="mob-nav-item"><i class="bi bi-house-fill"></i><span>Home</span></a>
     <a href="category.html" class="mob-nav-item"><i class="bi bi-grid-fill"></i><span>Category</span></a>
     <a href="products.html" class="mob-nav-center"><div class="eid-circle"><i class="bi bi-stars"></i></div><span class="eid-circle-label">Eid Fest</span></a>
-    <a href="cart.html" class="mob-nav-item"><i class="bi bi-cart-fill"></i><span>Cart</span></a>
+    <a href="cart.html" class="mob-nav-item active"><i class="bi bi-cart-fill"></i><span>Cart</span></a>
     <a href="#" class="mob-nav-item" onclick="openMobAccount(event)"><i class="bi bi-person-fill"></i><span>Account</span></a>
   </div>
 </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Shop By Category dropdown
-  let dropOpen = false;
-  function toggleCatDropdown() {
-    dropOpen = !dropOpen;
-    document.getElementById('catDropdown').classList.toggle('open', dropOpen);
-    document.getElementById('shopCatBtn').classList.toggle('open', dropOpen);
-    if (dropOpen) showPanel('clothing', document.querySelector('.cat-list-item'));
-  }
-  document.addEventListener('click', e => {
-    if (dropOpen && !e.target.closest('.cat-dropdown-wrap')) {
-      dropOpen = false;
-      document.getElementById('catDropdown').classList.remove('open');
-      document.getElementById('shopCatBtn').classList.remove('open');
-    }
-  });
-  function showPanel(id, item) {
-    document.querySelectorAll('.cat-list-item').forEach(i => i.classList.remove('active'));
-    if (item) item.classList.add('active');
-    document.querySelectorAll('.cat-sub-panel').forEach(p => p.classList.remove('active'));
-    const p = document.getElementById('panel-' + id); if (p) p.classList.add('active');
-  }
-
-  // Mobile nav active
-  document.querySelectorAll('.mob-nav-item').forEach(item => {
-    item.addEventListener('click', () => {
-      document.querySelectorAll('.mob-nav-item').forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-    });
-  });
-</script>
 
 <!-- Mobile Account Sidebar -->
 <div class="mob-account-overlay" id="mobAccountOverlay" onclick="closeMobAccount()"></div>
@@ -562,8 +611,29 @@
   </div>
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+  let dropOpen=false;
+  function toggleCatDropdown(){
+    dropOpen=!dropOpen;
+    document.getElementById('catDropdown').classList.toggle('open',dropOpen);
+    document.getElementById('shopCatBtn').classList.toggle('open',dropOpen);
+    if(dropOpen) showPanel('clothing',document.querySelector('.cat-list-item'));
+  }
+  document.addEventListener('click',e=>{
+    if(dropOpen&&!e.target.closest('.cat-dropdown-wrap')){
+      dropOpen=false;
+      document.getElementById('catDropdown').classList.remove('open');
+      document.getElementById('shopCatBtn').classList.remove('open');
+    }
+  });
+  function showPanel(id,item){
+    document.querySelectorAll('.cat-list-item').forEach(i=>i.classList.remove('active'));
+    if(item)item.classList.add('active');
+    document.querySelectorAll('.cat-sub-panel').forEach(p=>p.classList.remove('active'));
+    const p=document.getElementById('panel-'+id);if(p)p.classList.add('active');
+  }
+
   function openMobAccount(e) {
     if(e) e.preventDefault();
     document.getElementById('mobAccountOverlay').classList.add('show');
@@ -574,7 +644,5 @@
     document.getElementById('mobAccountSidebar').classList.remove('open');
   }
 </script>
-
 </body>
 </html>
-

@@ -24,11 +24,11 @@
     </div>
     <div class="header-icons">
       <button class="icon-btn mob-search-icon d-md-none"><i class="fa fa-magnifying-glass"></i></button>
-      <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
-      <button class="icon-btn position-relative d-none d-md-flex">
+      <a href="wishlist.html" class="icon-btn"><i class="fa-regular fa-heart"></i></a>
+      <a href="cart.html" class="icon-btn position-relative d-none d-md-flex">
         <i class="fa-solid fa-cart-shopping"></i>
         <span class="cart-badge">0</span>
-      </button>
+      </a>
       <div class="my-account-wrap d-none d-md-block">
         <button class="my-account-btn">
           <span class="avatar-circle"><i class="fa-regular fa-user"></i></span>
@@ -37,182 +37,312 @@
         <div class="account-dropdown">
           <a href="login.html"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a>
           <a href="register.html"><i class="fa-solid fa-user-plus me-2"></i>Register</a>
-          <a href="#"><i class="fa-solid fa-box me-2"></i>Order Tracking</a>
+          <a href="order-tracking.html"><i class="fa-solid fa-box me-2"></i>Order Tracking</a>
         </div>
       </div>
+
     </div>
   </div>
 </header>
+<!-- MOBILE SEARCH OVERLAY -->
+<div class="mob-search-overlay" id="mobSearchOverlay">
+  <input type="text" placeholder="I'm shopping for ..." id="mobSearchInput"/>
+  <button class="mob-search-submit"><i class="fa fa-magnifying-glass"></i></button>
+</div>
+<script>(function(){var btn=document.querySelector('.mob-search-icon'),ov=document.getElementById('mobSearchOverlay'),inp=document.getElementById('mobSearchInput');if(btn&&ov){btn.addEventListener('click',function(e){e.stopPropagation();ov.classList.toggle('open');if(ov.classList.contains('open'))inp.focus();});document.addEventListener('click',function(e){if(ov.classList.contains('open')&&!ov.contains(e.target)&&e.target!==btn)ov.classList.remove('open');});}}());</script>
 
-<!-- SECONDARY NAV -->
-<nav class="sec-nav">
-  <div class="sec-nav-inner">
-    <div class="cat-dropdown-wrap d-none d-lg-block">
-      <button class="shop-cat-btn" id="shopCatBtn" onclick="toggleCatDropdown()">
-        <i class="fa fa-bars"></i><span class="cat-btn-text">Shop By Category</span>
-      </button>
-      <div class="cat-dropdown" id="catDropdown">
-        <div class="cat-list">
-          <div class="cat-list-item active" onmouseenter="showPanel('clothing',this)">Clothing &amp; Fashion <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('footwear',this)">Footwear <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('fashion-acc',this)">Fashion Accessories <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('lifestyle-acc',this)">Lifestyle Accessories <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('personal-care',this)">Personal Care <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('health-beauty',this)">Health &amp; Beauty <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('home-decor',this)">Home Decor <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('handicrafts',this)">Handicrafts <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('appliance',this)">Appliance <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('gift-cards',this)">Gift Cards <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('auto',this)">Automotives &amp; Motorbikes <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('sports',this)">Riding, Sports &amp; Fitness <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('phones',this)">Phones &amp; Tablets <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('food',this)">Food &amp; Snacks <i class="bi bi-chevron-right"></i></div>
-          <div class="cat-list-item" onmouseenter="showPanel('books',this)">Books &amp; Stationery Items <i class="bi bi-chevron-right"></i></div>
+  <!-- SECONDARY NAV -->
+  <nav class="sec-nav">
+    <div class="sec-nav-inner">
+      <div class="cat-dropdown-wrap d-none d-lg-block">
+        <button class="shop-cat-btn" id="shopCatBtn" onclick="toggleCatDropdown()">
+          <i class="fa fa-bars"></i><span class="cat-btn-text">Shop By Category</span>
+        </button>
+        <div class="cat-dropdown" id="catDropdown">
+          <div class="cat-list">
+            <div class="cat-list-item active" onmouseenter="showPanel('clothing',this)">Clothing &amp; Fashion <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('footwear',this)">Footwear <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('fashion-acc',this)">Fashion Accessories <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('lifestyle-acc',this)">Lifestyle Accessories <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('personal-care',this)">Personal Care <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('health-beauty',this)">Health &amp; Beauty <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('home-decor',this)">Home Decor <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('handicrafts',this)">Handicrafts <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('appliance',this)">Appliance <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('gift-cards',this)">Gift Cards <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('auto',this)">Automotives &amp; Motorbikes <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('sports',this)">Riding, Sports &amp; Fitness <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('phones',this)">Phones &amp; Tablets <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('food',this)">Food &amp; Snacks <i
+                class="bi bi-chevron-right"></i></div>
+            <div class="cat-list-item" onmouseenter="showPanel('books',this)">Books &amp; Stationery Items <i
+                class="bi bi-chevron-right"></i></div>
+          </div>
+          <div class="cat-sub-panel active" id="panel-clothing">
+            <h6>Clothing &amp; Fashion</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Men's Panjabi</a><a href="#" class="sub-link">Men's Casual
+                Shirt</a><a href="#" class="sub-link">Men's Formal Shirt</a><a href="#" class="sub-link">Men's T-Shirt
+                &amp; Polo</a><a href="#" class="sub-link">Men's Trouser &amp; Pant</a><a href="#"
+                class="sub-link">Men's Winter Collection</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Women's Saree</a><a href="#" class="sub-link">Women's
+                Kurti &amp; Tops</a><a href="#" class="sub-link">Women's Salwar Kameez</a><a href="#"
+                class="sub-link">Women's Winter Collection</a><a href="#" class="sub-link">Boys Polo &amp; T-Shirt</a><a
+                href="#" class="sub-link">Girls Tops &amp; Ethnic</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Kids Winter Collection</a><a href="#" class="sub-link">EID
+                Collection 2026</a><a href="#" class="sub-link">Fashion Tops</a><a href="#" class="sub-link">Comforter
+                &amp; Bedding</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-footwear">
+            <h6>Footwear</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Men's Formal Shoes</a><a href="#" class="sub-link">Men's
+                Casual Shoes</a><a href="#" class="sub-link">Men's Sandals &amp; Slippers</a><a href="#"
+                class="sub-link">Men's Loafers</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Women's Heels</a><a href="#" class="sub-link">Women's
+                Flats</a><a href="#" class="sub-link">Women's Sandals</a><a href="#" class="sub-link">Kids Footwear</a>
+            </div>
+          </div>
+          <div class="cat-sub-panel" id="panel-fashion-acc">
+            <h6>Fashion Accessories</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Sunglasses</a><a href="#" class="sub-link">Watches</a><a
+                href="#" class="sub-link">Hats &amp; Caps</a><a href="#" class="sub-link">Scarves &amp; Shawls</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Jewellery &amp; Ornaments</a><a href="#"
+                class="sub-link">Hair Accessories</a><a href="#" class="sub-link">Ties &amp; Bow Ties</a><a href="#"
+                class="sub-link">Cufflinks &amp; Pins</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-lifestyle-acc">
+            <h6>Lifestyle Accessories</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Men's Wallet</a><a href="#" class="sub-link">Men's
+                Belt</a><a href="#" class="sub-link">Bags &amp; Backpacks</a><a href="#" class="sub-link">Luggage &amp;
+                Travel</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Women's Handbag</a><a href="#" class="sub-link">Women's
+                Clutch</a><a href="#" class="sub-link">Keychains &amp; Holders</a><a href="#"
+                class="sub-link">Umbrellas</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-personal-care">
+            <h6>Personal Care</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Perfumes &amp; Deodorants</a><a href="#"
+                class="sub-link">Hair Care</a><a href="#" class="sub-link">Skin Care</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Shaving &amp; Grooming</a><a href="#"
+                class="sub-link">Bath &amp; Body</a><a href="#" class="sub-link">Oral Care</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-health-beauty">
+            <h6>Health &amp; Beauty</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Vitamins &amp; Supplements</a><a href="#"
+                class="sub-link">Makeup &amp; Cosmetics</a><a href="#" class="sub-link">Face Care</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Fitness Equipment</a><a href="#" class="sub-link">Medical
+                Devices</a><a href="#" class="sub-link">Eye Care</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-home-decor">
+            <h6>Home Decor</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Bed Sheets &amp; Pillow Covers</a><a href="#"
+                class="sub-link">Comforters &amp; Quilts</a><a href="#" class="sub-link">Curtains &amp; Blinds</a><a
+                href="#" class="sub-link">Wall Art &amp; Paintings</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Rugs &amp; Carpets</a><a href="#" class="sub-link">Lamps
+                &amp; Lighting</a><a href="#" class="sub-link">Photo Frames</a><a href="#" class="sub-link">Candles
+                &amp; Holders</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-handicrafts">
+            <h6>Handicrafts</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Nakshi Kantha</a><a href="#" class="sub-link">Pottery
+                &amp; Ceramics</a><a href="#" class="sub-link">Jute Products</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Wooden Crafts</a><a href="#" class="sub-link">Bamboo
+                Products</a><a href="#" class="sub-link">Handloom Textiles</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-appliance">
+            <h6>Appliance</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Kitchen Appliances</a><a href="#" class="sub-link">Air
+                Conditioner</a><a href="#" class="sub-link">Refrigerator</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Washing Machine</a><a href="#" class="sub-link">Vacuum
+                Cleaner</a><a href="#" class="sub-link">Iron &amp; Steamers</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-gift-cards">
+            <h6>Gift Cards</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Afia Borka House Gift Card</a><a href="#" class="sub-link">DHEU Gift
+                Card</a><a href="#" class="sub-link">Festival Gift Card</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Corporate Gift Cards</a><a href="#"
+                class="sub-link">E-Gift Vouchers</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-auto">
+            <h6>Automotives &amp; Motorbikes</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Helmets</a><a href="#" class="sub-link">Riding Gear</a><a
+                href="#" class="sub-link">Car Accessories</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Bike Accessories</a><a href="#" class="sub-link">Cleaning
+                Products</a><a href="#" class="sub-link">Spare Parts</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-sports">
+            <h6>Riding, Sports &amp; Fitness</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Gym Equipment</a><a href="#" class="sub-link">Yoga &amp;
+                Pilates</a><a href="#" class="sub-link">Cycling Gear</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Cricket</a><a href="#" class="sub-link">Football</a><a
+                href="#" class="sub-link">Sports Apparel</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-phones">
+            <h6>Phones &amp; Tablets</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Smartphones</a><a href="#" class="sub-link">Tablets</a><a
+                href="#" class="sub-link">Phone Cases &amp; Covers</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Screen Protectors</a><a href="#" class="sub-link">Chargers
+                &amp; Cables</a><a href="#" class="sub-link">Earphones &amp; Headphones</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-food">
+            <h6>Food &amp; Snacks</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Dry Fruits &amp; Nuts</a><a href="#"
+                class="sub-link">Biscuits &amp; Cookies</a><a href="#" class="sub-link">Chocolates &amp; Candy</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Instant Noodles</a><a href="#" class="sub-link">Tea &amp;
+                Coffee</a><a href="#" class="sub-link">Organic &amp; Healthy</a></div>
+          </div>
+          <div class="cat-sub-panel" id="panel-books">
+            <h6>Books &amp; Stationery Items</h6>
+            <div class="sub-col"><a href="#" class="sub-link">Fiction &amp; Literature</a><a href="#"
+                class="sub-link">Islamic Books</a><a href="#" class="sub-link">Academic Books</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Notebooks &amp; Diaries</a><a href="#"
+                class="sub-link">Office Stationery</a><a href="#" class="sub-link">Art Supplies</a></div>
+          </div>
         </div>
-        <div class="cat-sub-panel active" id="panel-clothing"><h6>Clothing &amp; Fashion</h6><div class="sub-col"><a href="#" class="sub-link">Men's Panjabi</a><a href="#" class="sub-link">Men's Casual Shirt</a><a href="#" class="sub-link">Men's Formal Shirt</a><a href="#" class="sub-link">Men's T-Shirt &amp; Polo</a><a href="#" class="sub-link">Men's Trouser &amp; Pant</a><a href="#" class="sub-link">Men's Winter Collection</a></div><div class="sub-col"><a href="#" class="sub-link">Women's Saree</a><a href="#" class="sub-link">Women's Kurti &amp; Tops</a><a href="#" class="sub-link">Women's Salwar Kameez</a><a href="#" class="sub-link">Women's Winter Collection</a><a href="#" class="sub-link">Boys Polo &amp; T-Shirt</a><a href="#" class="sub-link">Girls Tops &amp; Ethnic</a></div><div class="sub-col"><a href="#" class="sub-link">Kids Winter Collection</a><a href="#" class="sub-link">EID Collection 2026</a><a href="#" class="sub-link">Fashion Tops</a><a href="#" class="sub-link">Comforter &amp; Bedding</a></div></div>
-        <div class="cat-sub-panel" id="panel-footwear"><h6>Footwear</h6><div class="sub-col"><a href="#" class="sub-link">Men's Formal Shoes</a><a href="#" class="sub-link">Men's Casual Shoes</a><a href="#" class="sub-link">Men's Sandals &amp; Slippers</a><a href="#" class="sub-link">Men's Loafers</a></div><div class="sub-col"><a href="#" class="sub-link">Women's Heels</a><a href="#" class="sub-link">Women's Flats</a><a href="#" class="sub-link">Women's Sandals</a><a href="#" class="sub-link">Kids Footwear</a></div></div>
-        <div class="cat-sub-panel" id="panel-fashion-acc"><h6>Fashion Accessories</h6><div class="sub-col"><a href="#" class="sub-link">Sunglasses</a><a href="#" class="sub-link">Watches</a><a href="#" class="sub-link">Hats &amp; Caps</a><a href="#" class="sub-link">Scarves &amp; Shawls</a></div><div class="sub-col"><a href="#" class="sub-link">Jewellery &amp; Ornaments</a><a href="#" class="sub-link">Hair Accessories</a><a href="#" class="sub-link">Ties &amp; Bow Ties</a><a href="#" class="sub-link">Cufflinks &amp; Pins</a></div></div>
-        <div class="cat-sub-panel" id="panel-lifestyle-acc"><h6>Lifestyle Accessories</h6><div class="sub-col"><a href="#" class="sub-link">Men's Wallet</a><a href="#" class="sub-link">Men's Belt</a><a href="#" class="sub-link">Bags &amp; Backpacks</a><a href="#" class="sub-link">Luggage &amp; Travel</a></div><div class="sub-col"><a href="#" class="sub-link">Women's Handbag</a><a href="#" class="sub-link">Women's Clutch</a><a href="#" class="sub-link">Keychains &amp; Holders</a><a href="#" class="sub-link">Umbrellas</a></div></div>
-        <div class="cat-sub-panel" id="panel-personal-care"><h6>Personal Care</h6><div class="sub-col"><a href="#" class="sub-link">Perfumes &amp; Deodorants</a><a href="#" class="sub-link">Hair Care</a><a href="#" class="sub-link">Skin Care</a></div><div class="sub-col"><a href="#" class="sub-link">Shaving &amp; Grooming</a><a href="#" class="sub-link">Bath &amp; Body</a><a href="#" class="sub-link">Oral Care</a></div></div>
-        <div class="cat-sub-panel" id="panel-health-beauty"><h6>Health &amp; Beauty</h6><div class="sub-col"><a href="#" class="sub-link">Vitamins &amp; Supplements</a><a href="#" class="sub-link">Makeup &amp; Cosmetics</a><a href="#" class="sub-link">Face Care</a></div><div class="sub-col"><a href="#" class="sub-link">Fitness Equipment</a><a href="#" class="sub-link">Medical Devices</a><a href="#" class="sub-link">Eye Care</a></div></div>
-        <div class="cat-sub-panel" id="panel-home-decor"><h6>Home Decor</h6><div class="sub-col"><a href="#" class="sub-link">Bed Sheets &amp; Pillow Covers</a><a href="#" class="sub-link">Comforters &amp; Quilts</a><a href="#" class="sub-link">Curtains &amp; Blinds</a><a href="#" class="sub-link">Wall Art &amp; Paintings</a></div><div class="sub-col"><a href="#" class="sub-link">Rugs &amp; Carpets</a><a href="#" class="sub-link">Lamps &amp; Lighting</a><a href="#" class="sub-link">Photo Frames</a><a href="#" class="sub-link">Candles &amp; Holders</a></div></div>
-        <div class="cat-sub-panel" id="panel-handicrafts"><h6>Handicrafts</h6><div class="sub-col"><a href="#" class="sub-link">Nakshi Kantha</a><a href="#" class="sub-link">Pottery &amp; Ceramics</a><a href="#" class="sub-link">Jute Products</a></div><div class="sub-col"><a href="#" class="sub-link">Wooden Crafts</a><a href="#" class="sub-link">Bamboo Products</a><a href="#" class="sub-link">Handloom Textiles</a></div></div>
-        <div class="cat-sub-panel" id="panel-appliance"><h6>Appliance</h6><div class="sub-col"><a href="#" class="sub-link">Kitchen Appliances</a><a href="#" class="sub-link">Air Conditioner</a><a href="#" class="sub-link">Refrigerator</a></div><div class="sub-col"><a href="#" class="sub-link">Washing Machine</a><a href="#" class="sub-link">Vacuum Cleaner</a><a href="#" class="sub-link">Iron &amp; Steamers</a></div></div>
-        <div class="cat-sub-panel" id="panel-gift-cards"><h6>Gift Cards</h6><div class="sub-col"><a href="#" class="sub-link">Afia Borka House Gift Card</a><a href="#" class="sub-link">Festival Gift Card</a></div><div class="sub-col"><a href="#" class="sub-link">Corporate Gift Cards</a><a href="#" class="sub-link">E-Gift Vouchers</a></div></div>
-        <div class="cat-sub-panel" id="panel-auto"><h6>Automotives &amp; Motorbikes</h6><div class="sub-col"><a href="#" class="sub-link">Helmets</a><a href="#" class="sub-link">Riding Gear</a><a href="#" class="sub-link">Car Accessories</a></div><div class="sub-col"><a href="#" class="sub-link">Bike Accessories</a><a href="#" class="sub-link">Cleaning Products</a><a href="#" class="sub-link">Spare Parts</a></div></div>
-        <div class="cat-sub-panel" id="panel-sports"><h6>Riding, Sports &amp; Fitness</h6><div class="sub-col"><a href="#" class="sub-link">Gym Equipment</a><a href="#" class="sub-link">Yoga &amp; Pilates</a><a href="#" class="sub-link">Cycling Gear</a></div><div class="sub-col"><a href="#" class="sub-link">Cricket</a><a href="#" class="sub-link">Football</a><a href="#" class="sub-link">Sports Apparel</a></div></div>
-        <div class="cat-sub-panel" id="panel-phones"><h6>Phones &amp; Tablets</h6><div class="sub-col"><a href="#" class="sub-link">Smartphones</a><a href="#" class="sub-link">Tablets</a><a href="#" class="sub-link">Phone Cases &amp; Covers</a></div><div class="sub-col"><a href="#" class="sub-link">Screen Protectors</a><a href="#" class="sub-link">Chargers &amp; Cables</a><a href="#" class="sub-link">Earphones &amp; Headphones</a></div></div>
-        <div class="cat-sub-panel" id="panel-food"><h6>Food &amp; Snacks</h6><div class="sub-col"><a href="#" class="sub-link">Dry Fruits &amp; Nuts</a><a href="#" class="sub-link">Biscuits &amp; Cookies</a><a href="#" class="sub-link">Chocolates &amp; Candy</a></div><div class="sub-col"><a href="#" class="sub-link">Instant Noodles</a><a href="#" class="sub-link">Tea &amp; Coffee</a><a href="#" class="sub-link">Organic &amp; Healthy</a></div></div>
-        <div class="cat-sub-panel" id="panel-books"><h6>Books &amp; Stationery Items</h6><div class="sub-col"><a href="#" class="sub-link">Fiction &amp; Literature</a><a href="#" class="sub-link">Islamic Books</a><a href="#" class="sub-link">Academic Books</a></div><div class="sub-col"><a href="#" class="sub-link">Notebooks &amp; Diaries</a><a href="#" class="sub-link">Office Stationery</a><a href="#" class="sub-link">Art Supplies</a></div></div>
       </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="category.html">Category</a>
+        <a href="products.html">Products</a>
+        
+        <div class="nav-item d-none d-lg-block">
+          <a href="#" class="eid-fest">EID-UL-FITR 26</a>
+          <div class="mega-drop eid-drop">
+            <div class="container-site">
+              <div class="d-flex align-items-start">
+                <div class="eid-links">
+                  <a href="#">MENS</a>
+                  <a href="#">WOMENS</a>
+                  <a href="#">BOYS</a>
+                  <a href="#">GIRLS</a>
+                  <a href="#">KIDS DRESS</a>
+                  <a href="#">FESTIVAL SETS</a>
+                </div>
+                <div class="eid-imgs">
+                  <a href="#"><img src="img/men.png" alt="Mens" /></a>
+                  <a href="#"><img src="img/women.png" alt="Womens" /></a>
+                  <a href="#"><img src="img/kids.png" alt="Kids" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item d-none d-lg-block">
+          <a href="#">Mens</a>
+          <div class="mega-drop cat-drop">
+            <div class="container-site">
+              <div class="d-flex gap-4">
+                <div class="cat-col" style="min-width:145px">
+                  <div class="cat-col-title">Mens Top Wear</div>
+                  <a href="#">Mens Panjabi</a>
+                  <a href="#">Mens Casual Shirt</a>
+                  <a href="#">Mens Formal Shirt</a>
+                  <a href="#">Mens T-Shirt</a>
+                </div>
+                <div class="cat-col" style="min-width:145px">
+                  <div class="cat-col-title">Mens Bottom Wear</div>
+                  <a href="#">Mens Formal Pant</a>
+                  <a href="#">Mens Jeans</a>
+                  <a href="#">Mens Joggers</a>
+                  <a href="#">Mens Shorts</a>
+                </div>
+                <div class="cat-col" style="min-width:145px">
+                  <div class="cat-col-title">Sports & Innerwear</div>
+                  <a href="#">Mens Sports Wear</a>
+                  <a href="#">Mens Innerwear</a>
+                  <a href="#">Winter Collection</a>
+                </div>
+                <div class="ms-auto d-none d-xl-block flex-shrink-0">
+                  <a href="#"><img src="img/men.png" class="cat-drop-img" alt="Mens" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item d-none d-lg-block">
+          <a href="#">Womens</a>
+          <div class="mega-drop cat-drop">
+            <div class="container-site">
+              <div class="d-flex gap-4">
+                <div class="cat-col" style="min-width:155px">
+                  <div class="cat-col-title">Womens Top Wear</div>
+                  <a href="#">Single Ethnic</a>
+                  <a href="#">Fashion Tops</a>
+                  <a href="#">Woman Shirt</a>
+                  <a href="#">Maternity Wear</a>
+                </div>
+                <div class="cat-col" style="min-width:155px">
+                  <div class="cat-col-title">Womens Bottom Wear</div>
+                  <a href="#">Womens Pant</a>
+                  <a href="#">Womens Chino Pant</a>
+                  <a href="#">Womens Jeans</a>
+                  <a href="#">Womens Skirt</a>
+                </div>
+                <div class="cat-col" style="min-width:155px">
+                  <div class="cat-col-title">Occasion Wear</div>
+                  <a href="#">Womens Jumpsuit</a>
+                  <a href="#">Western Gown</a>
+                  <a href="#">Party Wear</a>
+                </div>
+                <div class="ms-auto d-none d-xl-block flex-shrink-0">
+                  <a href="#"><img src="img/women.png" class="cat-drop-img" alt="Womens" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item d-none d-lg-block">
+          <a href="#">Kids</a>
+          <div class="mega-drop cat-drop">
+            <div class="container-site">
+              <div class="d-flex gap-4">
+                <div class="cat-col" style="min-width:145px">
+                  <div class="cat-col-title">New Born</div>
+                  <a href="#">3 to 18 (Month)</a>
+                  <a href="#">Boys</a>
+                  <a href="#">Girls</a>
+                </div>
+                <div class="cat-col" style="min-width:145px">
+                  <div class="cat-col-title">Baby Boys</div>
+                  <a href="#">Polo & T-Shirt</a>
+                  <a href="#">Panjabi & Kabli</a>
+                  <a href="#">Pant & Payjama</a>
+                </div>
+                <div class="cat-col" style="min-width:145px">
+                  <div class="cat-col-title">Baby Girls</div>
+                  <a href="#">Girls Kurti</a>
+                  <a href="#">Frock & Dungaree</a>
+                  <a href="#">Tops & Skirt</a>
+                </div>
+                <div class="ms-auto d-none d-xl-block flex-shrink-0">
+                  <a href="#"><img src="img/kids.png" class="cat-drop-img" alt="Kids" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="outlets.html" class="outlets-btn d-none d-lg-block"><i class="fa fa-store"></i>Outlets</a>
     </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="category.html">Category</a>
-      <a href="product.html">Products</a>
-      
-      <div class="nav-item d-none d-lg-block">
-        <a href="#" class="eid-fest">EID-UL-FITR 26</a>
-        <div class="mega-drop eid-drop">
-          <div class="container-site">
-            <div class="d-flex align-items-start">
-              <div class="eid-links">
-                <a href="#">MENS</a>
-                <a href="#">WOMENS</a>
-                <a href="#">BOYS</a>
-                <a href="#">GIRLS</a>
-                <a href="#">KIDS DRESS</a>
-                <a href="#">FESTIVAL SETS</a>
-              </div>
-              <div class="eid-imgs">
-                <a href="#"><img src="img/men.png" alt="Mens"/></a>
-                <a href="#"><img src="img/women.png" alt="Womens"/></a>
-                <a href="#"><img src="img/kids.png" alt="Kids"/></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <a href="about.html">About</a>
-      <div class="nav-item d-none d-lg-block">
-        <a href="#">Mens</a>
-        <div class="mega-drop cat-drop">
-          <div class="container-site">
-            <div class="d-flex gap-4">
-              <div class="cat-col" style="min-width:145px">
-                <div class="cat-col-title">Mens Top Wear</div>
-                <a href="#">Mens Panjabi</a>
-                <a href="#">Mens Casual Shirt</a>
-                <a href="#">Mens Formal Shirt</a>
-                <a href="#">Mens T-Shirt</a>
-              </div>
-              <div class="cat-col" style="min-width:145px">
-                <div class="cat-col-title">Mens Bottom Wear</div>
-                <a href="#">Mens Formal Pant</a>
-                <a href="#">Mens Jeans</a>
-                <a href="#">Mens Joggers</a>
-                <a href="#">Mens Shorts</a>
-              </div>
-              <div class="cat-col" style="min-width:145px">
-                <div class="cat-col-title">Sports & Innerwear</div>
-                <a href="#">Mens Sports Wear</a>
-                <a href="#">Mens Innerwear</a>
-                <a href="#">Winter Collection</a>
-              </div>
-              <div class="ms-auto d-none d-xl-block flex-shrink-0">
-                <a href="#"><img src="img/men.png" class="cat-drop-img" alt="Mens"/></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item d-none d-lg-block">
-        <a href="#">Womens</a>
-        <div class="mega-drop cat-drop">
-          <div class="container-site">
-            <div class="d-flex gap-4">
-              <div class="cat-col" style="min-width:155px">
-                <div class="cat-col-title">Womens Top Wear</div>
-                <a href="#">Single Ethnic</a>
-                <a href="#">Fashion Tops</a>
-                <a href="#">Woman Shirt</a>
-                <a href="#">Maternity Wear</a>
-              </div>
-              <div class="cat-col" style="min-width:155px">
-                <div class="cat-col-title">Womens Bottom Wear</div>
-                <a href="#">Womens Pant</a>
-                <a href="#">Womens Chino Pant</a>
-                <a href="#">Womens Jeans</a>
-                <a href="#">Womens Skirt</a>
-              </div>
-              <div class="cat-col" style="min-width:155px">
-                <div class="cat-col-title">Occasion Wear</div>
-                <a href="#">Womens Jumpsuit</a>
-                <a href="#">Western Gown</a>
-                <a href="#">Party Wear</a>
-              </div>
-              <div class="ms-auto d-none d-xl-block flex-shrink-0">
-                <a href="#"><img src="img/women.png" class="cat-drop-img" alt="Womens"/></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item d-none d-lg-block">
-        <a href="#">Kids</a>
-        <div class="mega-drop cat-drop">
-          <div class="container-site">
-            <div class="d-flex gap-4">
-              <div class="cat-col" style="min-width:145px">
-                <div class="cat-col-title">New Born</div>
-                <a href="#">3 to 18 (Month)</a>
-                <a href="#">Boys</a>
-                <a href="#">Girls</a>
-              </div>
-              <div class="cat-col" style="min-width:145px">
-                <div class="cat-col-title">Baby Boys</div>
-                <a href="#">Polo & T-Shirt</a>
-                <a href="#">Panjabi & Kabli</a>
-                <a href="#">Pant & Payjama</a>
-              </div>
-              <div class="cat-col" style="min-width:145px">
-                <div class="cat-col-title">Baby Girls</div>
-                <a href="#">Girls Kurti</a>
-                <a href="#">Frock & Dungaree</a>
-                <a href="#">Tops & Skirt</a>
-              </div>
-              <div class="ms-auto d-none d-xl-block flex-shrink-0">
-                <a href="#"><img src="img/kids.png" class="cat-drop-img" alt="Kids"/></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="#" class="outlets-btn d-none d-lg-block"><i class="fa fa-store"></i>Outlets</a>
-  </div>
-</nav>
+  </nav>
 
 <!-- BREADCRUMB -->
 <div class="pp-breadcrumb">
@@ -271,6 +401,11 @@
   </div>
 </div>
 
+<!-- TAGLINE -->
+<div class="tagline-strip">
+  Explore Trendy Fashion Finds at Online Shopping BD Marketplace &ndash; Your Ultimate Fashion &amp; Lifestyle destination in Bangladesh! <a href="products.html">Shop Now!</a>
+</div>
+
 <!-- FOOTER -->
 <footer style="border-top:1px solid #e5e7eb;background:#fff;margin-top:24px;">
   <div class="container" style="max-width:1260px;padding:24px 20px 16px;">
@@ -301,7 +436,7 @@
         <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Company</h6>
         <ul class="list-unstyled mb-0 small">
           <li class="mb-1"><a href="blog.html" style="color:#1a5dc8;text-decoration:none;font-weight:500;">Blogs</a></li>
-          <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Outlets</a></li>
+          <li class="mb-1"><a href="outlets.html" style="color:#6b7280;text-decoration:none;">Outlets</a></li>
           <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Careers</a></li>
           <li class="mb-1"><a href="about.html" style="color:#6b7280;text-decoration:none;">About Us</a></li>
           <li class="mb-1"><a href="contact.html" style="color:#6b7280;text-decoration:none;">Contact Us</a></li>
@@ -314,9 +449,9 @@
         <ul class="list-unstyled mb-0 small">
           <li class="mb-1"><a href="login.html" style="color:#6b7280;text-decoration:none;">Login</a></li>
           <li class="mb-1"><a href="register.html" style="color:#6b7280;text-decoration:none;">Register</a></li>
-          <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Brands</a></li>
-          <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Best Deals</a></li>
-          <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Marketplace</a></li>
+          <li class="mb-1"><a href="brands.html" style="color:#6b7280;text-decoration:none;">Brands</a></li>
+          <li class="mb-1"><a href="best-deals.html" style="color:#6b7280;text-decoration:none;">Best Deals</a></li>
+          <li class="mb-1"><a href="marketplace.html" style="color:#6b7280;text-decoration:none;">Marketplace</a></li>
         </ul>
       </div>
 
@@ -334,34 +469,23 @@
 
       <!-- Social -->
       <div class="col-lg-3 col-md-6">
-        <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Social Media for Afia Borka House</h6>
-        <div class="d-flex flex-wrap gap-2 mb-2">
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:#1877f2;color:#fff;"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:#0077b5;color:#fff;"><i class="bi bi-linkedin"></i></a>
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:#ff0000;color:#fff;"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-tiktok"></i></a>
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-twitter-x"></i></a>
+          <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Social Media for Afia Borka House</h6>
+          <div class="d-flex flex-wrap gap-2 mb-2">
+            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
+              style="width:30px;height:30px;background:#1877f2;color:#fff;"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
+              style="width:30px;height:30px;background:#0077b5;color:#fff;"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
+              style="width:30px;height:30px;background:#ff0000;color:#fff;"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
+              style="width:30px;height:30px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;"><i
+                class="bi bi-instagram"></i></a>
+            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
+              style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-tiktok"></i></a>
+            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
+              style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-twitter-x"></i></a>
+          </div>
         </div>
-
-        <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Social Media for Afia Borka House</h6>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:#1877f2;color:#fff;"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:#ff0000;color:#fff;"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-             style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-tiktok"></i></a>
-        </div>
-      </div>
     </div>
   </div>
   <div class="text-center py-2 small text-muted" style="border-top:1px solid #e5e7eb;">
@@ -375,8 +499,8 @@
   <div class="mob-nav-items">
     <a href="index.html" class="mob-nav-item"><i class="bi bi-house-fill"></i><span>Home</span></a>
     <a href="category.html" class="mob-nav-item"><i class="bi bi-grid-fill"></i><span>Category</span></a>
-    <a href="product.html" class="mob-nav-center"><div class="eid-circle"><i class="bi bi-stars"></i></div><span class="eid-circle-label">Eid Fest</span></a>
-    <a href="#" class="mob-nav-item"><i class="bi bi-cart-fill"></i><span>Cart</span></a>
+    <a href="products.html" class="mob-nav-center"><div class="eid-circle"><i class="bi bi-stars"></i></div><span class="eid-circle-label">Eid Fest</span></a>
+    <a href="cart.html" class="mob-nav-item"><i class="bi bi-cart-fill"></i><span>Cart</span></a>
     <a href="#" class="mob-nav-item" onclick="openMobAccount(event)"><i class="bi bi-person-fill"></i><span>Account</span></a>
   </div>
 </nav>
@@ -428,7 +552,7 @@
   <div class="mob-account-links">
     <a href="login.html">Login</a>
     <a href="register.html">Register</a>
-    <a href="#">Order Tracking</a>
+    <a href="order-tracking.html">Order Tracking</a>
   </div>
 </div>
 

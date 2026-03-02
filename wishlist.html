@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cookies Policy | Afia Borka House</title>
-  <meta name="description" content="Read how Afia Borka House uses cookies and similar technologies to improve your browsing and shopping experience." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Wishlist | Afia Borka House</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .wishlist-page { padding: 40px 0; background: #f8fafc; min-height: 60vh; }
+    .wishlist-container { max-width: 1260px; margin: 0 auto; padding: 0 20px; }
+    .wishlist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+    .wishlist-item { background: #fff; border-radius: 12px; border: 1px solid #e5e7eb; overflow: hidden; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+    .wishlist-item:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .wishlist-img-wrap { position: relative; padding-top: 130%; overflow: hidden; }
+    .wishlist-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .wishlist-item:hover .wishlist-img { transform: scale(1.05); }
+    .wishlist-info { padding: 18px; }
+    .wishlist-name { font-size: 15px; font-weight: 600; color: #111827; text-decoration: none; display: block; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .wishlist-name:hover { color: var(--blue); }
+    .wishlist-price { font-size: 16px; font-weight: 700; color: var(--blue); margin-bottom: 16px; }
+    .wishlist-actions { display: flex; gap: 10px; }
+    .add-cart-btn { flex: 1; background: var(--blue); color: #fff; border: none; border-radius: 6px; padding: 10px; font-size: 13px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    .add-cart-btn:hover { background: var(--blue-dark); }
+    .remove-wish-btn { width: 40px; background: #fee2e2; color: #ef4444; border: none; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+    .remove-wish-btn:hover { background: #fecaca; }
+    .empty-wishlist { text-align: center; padding: 80px 20px; }
+    .empty-wishlist i { font-size: 64px; color: #d1d5db; margin-bottom: 24px; display: block; }
+  </style>
 </head>
-
-<body class="pp-body">
+<body>
 <!-- TOP HEADER -->
 <header class="top-header">
   <div class="header-inner">
@@ -346,62 +364,73 @@
     </div>
   </nav>
 
-<!-- BREADCRUMB -->
-<div class="pp-breadcrumb">
-  <div class="bc-inner">
-    <a href="index.html">Home</a>
-    <span class="sep">/</span>
-    <span class="current">Cookies Policy</span>
-  </div>
-</div>
-
-<!-- PAGE CONTENT -->
-<div class="pp-page">
-  <div class="pp-card">
-    <h1>Cookies Policy</h1>
-
-    <p>This Cookies Policy explains how Afia Borka House (we, us or our) uses cookies and similar technologies when you visit our website or use our services.</p>
-
-    <h2>1. What Are Cookies?</h2>
-    <p>Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They help the site recognize your device, remember your preferences, and improve your overall browsing experience.</p>
-
-    <h2>2. How We Use Cookies</h2>
-    <p>We use cookies to:</p>
-    <ul>
-      <li>Remember items added to your shopping cart.</li>
-      <li>Keep you signed in to your account where applicable.</li>
-      <li>Save your language, region, and display preferences.</li>
-      <li>Understand how visitors use our website so we can improve layout, content, and performance.</li>
-      <li>Display relevant offers and promotions.</li>
-    </ul>
-
-    <h2>3. Types of Cookies We Use</h2>
-    <p><strong>Essential cookies:</strong> Required for core site functionality such as navigating pages, accessing secure areas, and processing orders.</p>
-    <p><strong>Performance &amp; analytics cookies:</strong> Help us understand how visitors interact with the site (for example, which pages are visited most often).</p>
-    <p><strong>Functionality cookies:</strong> Remember your preferences, such as saved addresses or recently viewed items, to personalize your experience.</p>
-    <p><strong>Advertising cookies (if used):</strong> May be used to show you relevant ads based on your interests. If enabled in the future, details will be updated in this policy.</p>
-
-    <h2>4. Thirdâ€‘Party Cookies</h2>
-    <p>Some cookies may be set by thirdâ€‘party service providers, such as analytics tools or embedded content (e.g., videos, social media widgets). These providers have their own privacy and cookies policies, which we recommend reviewing separately.</p>
-
-    <h2>5. Managing Cookies</h2>
-    <p>Most web browsers allow you to control cookies through their settings. You can choose to block or delete cookies, or to receive a warning before a cookie is stored. Please note that disabling certain cookies may affect site functionality, such as login, cart, or checkout features.</p>
-
-    <h2>6. Cookies and Personal Data</h2>
-    <p>Some cookies may collect information that can be considered personal data, such as IP address or unique device identifiers. Any personal data collected through cookies is handled in accordance with our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-
-    <h2>7. Changes to This Cookies Policy</h2>
-    <p>We may update this Cookies Policy from time to time to reflect changes in technology, law, or our services. Any updates will be posted on this page with an updated effective date.</p>
-
-    <h2>8. Contact Us</h2>
-    <p>If you have any questions about how we use cookies, please contact us at
-      <a href="mailto:support@afiaborkahouse.com">support@afiaborkahouse.com</a>.</p>
-
-    <div class="pp-contact-block">
-      <strong>Afia Borka House</strong><br />
-      Avenue #02, Road #14, House No #966, Mirpur DOHS, DHAKA-1216, Bangladesh.<br />
-      Phone: +88-01885-998899<br />
-      Email: <a href="mailto:support@afiaborkahouse.com">support@afiaborkahouse.com</a>
+<div class="wishlist-page">
+  <div class="wishlist-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold mb-0" style="color: #111827;">My Wishlist</h2>
+      <span class="text-muted fw-semi-bold">4 Items</span>
+    </div>
+    
+    <div class="wishlist-grid">
+      <!-- Item 1 -->
+      <div class="wishlist-item">
+        <div class="wishlist-img-wrap">
+          <img src="img/men.png" class="wishlist-img" alt="Product">
+        </div>
+        <div class="wishlist-info">
+          <a href="products.html" class="wishlist-name">Mens Panjabi - Regular Fit</a>
+          <div class="wishlist-price">Tk. 2990</div>
+          <div class="wishlist-actions">
+            <button class="add-cart-btn"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+            <button class="remove-wish-btn" title="Remove"><i class="bi bi-x-lg"></i></button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 2 -->
+      <div class="wishlist-item">
+        <div class="wishlist-img-wrap">
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=300&h=400&fit=crop" class="wishlist-img" alt="Product">
+        </div>
+        <div class="wishlist-info">
+          <a href="products.html" class="wishlist-name">Womens Ethnic 3 Pcs</a>
+          <div class="wishlist-price">Tk. 6690</div>
+          <div class="wishlist-actions">
+            <button class="add-cart-btn"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+            <button class="remove-wish-btn" title="Remove"><i class="bi bi-x-lg"></i></button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 3 -->
+      <div class="wishlist-item">
+        <div class="wishlist-img-wrap">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=300&h=400&fit=crop" class="wishlist-img" alt="Product">
+        </div>
+        <div class="wishlist-info">
+          <a href="products.html" class="wishlist-name">Mens Full Sleeve Casual Shirt</a>
+          <div class="wishlist-price">Tk. 2190</div>
+          <div class="wishlist-actions">
+            <button class="add-cart-btn"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+            <button class="remove-wish-btn" title="Remove"><i class="bi bi-x-lg"></i></button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 4 -->
+      <div class="wishlist-item">
+        <div class="wishlist-img-wrap">
+          <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=300&h=400&fit=crop" class="wishlist-img" alt="Product">
+        </div>
+        <div class="wishlist-info">
+          <a href="products.html" class="wishlist-name">Womens Western Gown</a>
+          <div class="wishlist-price">Tk. 3490</div>
+          <div class="wishlist-actions">
+            <button class="add-cart-btn"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+            <button class="remove-wish-btn" title="Remove"><i class="bi bi-x-lg"></i></button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -428,11 +457,10 @@
         </div>
         <div class="d-flex mb-2 small text-muted">
           <i class="bi bi-envelope-fill me-2" style="color:#1a5dc8;font-size:14px;margin-top:2px;"></i>
-          <a href="mailto:support@afiaborkahouse.com"
-             style="color:#2563eb;text-decoration:none;">support@afiaborkahouse.com</a>
+          <a href="mailto:support@afiaborkahouse.com" style="color:#2563eb;text-decoration:none;">support@afiaborkahouse.com</a>
         </div>
         <div class="small text-muted mt-1">
-          DBID Number: <strong>204425796</strong><br />
+          DBID Number: <strong>204425796</strong><br/>
           D-U-N-S Number: <strong>731962671</strong>
         </div>
       </div>
@@ -467,7 +495,7 @@
         <ul class="list-unstyled mb-0 small">
           <li class="mb-1"><a href="faq.html" style="color:#6b7280;text-decoration:none;">FAQs</a></li>
           <li class="mb-1"><a href="privacy-policy.html" style="color:#6b7280;text-decoration:none;">Privacy Policy</a></li>
-          <li class="mb-1"><a href="cookies-policy.html" style="color:#1a5dc8;text-decoration:none;font-weight:500;">Cookies Policy</a></li>
+          <li class="mb-1"><a href="cookies-policy.html" style="color:#6b7280;text-decoration:none;">Cookies Policy</a></li>
           <li class="mb-1"><a href="terms.html" style="color:#6b7280;text-decoration:none;">Terms &amp; Conditions</a></li>
           <li class="mb-1"><a href="replacement.html" style="color:#6b7280;text-decoration:none;">Replacement Policy</a></li>
         </ul>
@@ -499,8 +527,6 @@
   </div>
 </footer>
 
-<button class="float-chat" title="Chat"><i class="bi bi-chat-dots-fill"></i></button>
-
 <nav class="mobile-bottom-nav">
   <div class="mob-nav-items">
     <a href="index.html" class="mob-nav-item"><i class="bi bi-house-fill"></i><span>Home</span></a>
@@ -511,38 +537,6 @@
   </div>
 </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Shop By Category dropdown
-  let dropOpen = false;
-  function toggleCatDropdown() {
-    dropOpen = !dropOpen;
-    document.getElementById('catDropdown').classList.toggle('open', dropOpen);
-    document.getElementById('shopCatBtn').classList.toggle('open', dropOpen);
-    if (dropOpen) showPanel('clothing', document.querySelector('.cat-list-item'));
-  }
-  document.addEventListener('click', e => {
-    if (dropOpen && !e.target.closest('.cat-dropdown-wrap')) {
-      dropOpen = false;
-      document.getElementById('catDropdown').classList.remove('open');
-      document.getElementById('shopCatBtn').classList.remove('open');
-    }
-  });
-  function showPanel(id, item) {
-    document.querySelectorAll('.cat-list-item').forEach(i => i.classList.remove('active'));
-    if (item) item.classList.add('active');
-    document.querySelectorAll('.cat-sub-panel').forEach(p => p.classList.remove('active'));
-    const p = document.getElementById('panel-' + id); if (p) p.classList.add('active');
-  }
-
-  // Mobile nav active
-  document.querySelectorAll('.mob-nav-item').forEach(item => {
-    item.addEventListener('click', () => {
-      document.querySelectorAll('.mob-nav-item').forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-    });
-  });
-</script>
 
 <!-- Mobile Account Sidebar -->
 <div class="mob-account-overlay" id="mobAccountOverlay" onclick="closeMobAccount()"></div>
@@ -562,8 +556,29 @@
   </div>
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+  let dropOpen=false;
+  function toggleCatDropdown(){
+    dropOpen=!dropOpen;
+    document.getElementById('catDropdown').classList.toggle('open',dropOpen);
+    document.getElementById('shopCatBtn').classList.toggle('open',dropOpen);
+    if(dropOpen) showPanel('clothing',document.querySelector('.cat-list-item'));
+  }
+  document.addEventListener('click',e=>{
+    if(dropOpen&&!e.target.closest('.cat-dropdown-wrap')){
+      dropOpen=false;
+      document.getElementById('catDropdown').classList.remove('open');
+      document.getElementById('shopCatBtn').classList.remove('open');
+    }
+  });
+  function showPanel(id,item){
+    document.querySelectorAll('.cat-list-item').forEach(i=>i.classList.remove('active'));
+    if(item)item.classList.add('active');
+    document.querySelectorAll('.cat-sub-panel').forEach(p=>p.classList.remove('active'));
+    const p=document.getElementById('panel-'+id);if(p)p.classList.add('active');
+  }
+
   function openMobAccount(e) {
     if(e) e.preventDefault();
     document.getElementById('mobAccountOverlay').classList.add('show');
@@ -574,7 +589,5 @@
     document.getElementById('mobAccountSidebar').classList.remove('open');
   }
 </script>
-
 </body>
 </html>
-

@@ -27,11 +27,11 @@
     </div>
     <div class="header-icons">
       <button class="icon-btn mob-search-icon d-md-none"><i class="fa fa-magnifying-glass"></i></button>
-      <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
-      <button class="icon-btn position-relative d-none d-md-flex">
+      <a href="wishlist.html" class="icon-btn"><i class="fa-regular fa-heart"></i></a>
+      <a href="cart.html" class="icon-btn position-relative d-none d-md-flex">
         <i class="fa-solid fa-cart-shopping"></i>
         <span class="cart-badge">0</span>
-      </button>
+      </a>
       <div class="my-account-wrap d-none d-md-block">
         <button class="my-account-btn">
           <span class="avatar-circle"><i class="fa-regular fa-user"></i></span>
@@ -40,13 +40,19 @@
         <div class="account-dropdown">
           <a href="login.html"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a>
           <a href="register.html"><i class="fa-solid fa-user-plus me-2"></i>Register</a>
-          <a href="#"><i class="fa-solid fa-box me-2"></i>Order Tracking</a>
+          <a href="order-tracking.html"><i class="fa-solid fa-box me-2"></i>Order Tracking</a>
         </div>
       </div>
 
     </div>
   </div>
 </header>
+<!-- MOBILE SEARCH OVERLAY -->
+<div class="mob-search-overlay" id="mobSearchOverlay">
+  <input type="text" placeholder="I'm shopping for ..." id="mobSearchInput"/>
+  <button class="mob-search-submit"><i class="fa fa-magnifying-glass"></i></button>
+</div>
+<script>(function(){var btn=document.querySelector('.mob-search-icon'),ov=document.getElementById('mobSearchOverlay'),inp=document.getElementById('mobSearchInput');if(btn&&ov){btn.addEventListener('click',function(e){e.stopPropagation();ov.classList.toggle('open');if(ov.classList.contains('open'))inp.focus();});document.addEventListener('click',function(e){if(ov.classList.contains('open')&&!ov.contains(e.target)&&e.target!==btn)ov.classList.remove('open');});}}());</script>
 
   <!-- SECONDARY NAV -->
   <nav class="sec-nav">
@@ -210,10 +216,11 @@
         </div>
       </div>
       <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="category.html">Category</a>
-      <a href="product.html">Products</a>
-      <div class="nav-item d-none d-lg-block">
+        <a href="index.html">Home</a>
+        <a href="category.html">Category</a>
+        <a href="products.html">Products</a>
+        
+        <div class="nav-item d-none d-lg-block">
           <a href="#" class="eid-fest">EID-UL-FITR 26</a>
           <div class="mega-drop eid-drop">
             <div class="container-site">
@@ -235,7 +242,6 @@
             </div>
           </div>
         </div>
-      <a href="about.html">About</a>
 
         <div class="nav-item d-none d-lg-block">
           <a href="#">Mens</a>
@@ -333,8 +339,11 @@
             </div>
           </div>
         </div>
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <a href="#" class="outlets-btn d-none d-lg-block"><i class="fa fa-store"></i>Outlets</a>
+      <a href="outlets.html" class="outlets-btn d-none d-lg-block"><i class="fa fa-store"></i>Outlets</a>
     </div>
   </nav>
 
@@ -403,7 +412,12 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- TAGLINE -->
+<div class="tagline-strip">
+  Explore Trendy Fashion Finds at Online Shopping BD Marketplace &ndash; Your Ultimate Fashion &amp; Lifestyle destination in Bangladesh! <a href="products.html">Shop Now!</a>
+</div>
+
+<!-- FOOTER -->
   <footer style="border-top:1px solid #e5e7eb;background:#fff;margin-top:24px;">
     <div class="container" style="max-width:1260px;padding:24px 20px 16px;">
       <div class="row gy-4">
@@ -434,8 +448,8 @@
           <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Company</h6>
           <ul class="list-unstyled mb-0 small">
           <li class="mb-1"><a href="blog.html" style="color:#6b7280;text-decoration:none;">Blogs</a></li>
-            <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Outlets</a></li>
-            <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Careers</a></li>
+            <li class="mb-1"><a href="outlets.html" style="color:#6b7280;text-decoration:none;">Outlets</a></li>
+            <li class="mb-1"><a href="careers.html" style="color:#6b7280;text-decoration:none;">Careers</a></li>
             <li class="mb-1"><a href="about.html" style="color:#6b7280;text-decoration:none;">About Us</a></li>
             <li class="mb-1"><a href="contact.html" style="color:#6b7280;text-decoration:none;">Contact Us</a></li>
           </ul>
@@ -447,9 +461,9 @@
           <ul class="list-unstyled mb-0 small">
           <li class="mb-1"><a href="login.html" style="color:#6b7280;text-decoration:none;">Login</a></li>
           <li class="mb-1"><a href="register.html" style="color:#6b7280;text-decoration:none;">Register</a></li>
-            <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Brands</a></li>
-            <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Best Deals</a></li>
-            <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Marketplace</a></li>
+            <li class="mb-1"><a href="brands.html" style="color:#6b7280;text-decoration:none;">Brands</a></li>
+            <li class="mb-1"><a href="best-deals.html" style="color:#6b7280;text-decoration:none;">Best Deals</a></li>
+            <li class="mb-1"><a href="marketplace.html" style="color:#6b7280;text-decoration:none;">Marketplace</a></li>
           </ul>
         </div>
 
@@ -461,7 +475,7 @@
             <li class="mb-1"><a href="privacy-policy.html" style="color:#1a5dc8;text-decoration:none;font-weight:500;">Privacy Policy</a></li>
             <li class="mb-1"><a href="cookies-policy.html" style="color:#6b7280;text-decoration:none;">Cookies Policy</a></li>
             <li class="mb-1"><a href="terms.html" style="color:#6b7280;text-decoration:none;">Terms &amp; Conditions</a></li>
-            <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Replacement Policy</a></li>
+            <li class="mb-1"><a href="replacement.html" style="color:#6b7280;text-decoration:none;">Replacement Policy</a></li>
           </ul>
         </div>
 
@@ -483,25 +497,11 @@
             <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
               style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-twitter-x"></i></a>
           </div>
-
-          <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Social Media for Afia Borka House</h6>
-          <div class="d-flex flex-wrap gap-2">
-            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-              style="width:30px;height:30px;background:#1877f2;color:#fff;"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-              style="width:30px;height:30px;background:#ff0000;color:#fff;"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-              style="width:30px;height:30px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;"><i
-                class="bi bi-instagram"></i></a>
-            <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle"
-              style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-tiktok"></i></a>
-          </div>
         </div>
       </div>
     </div>
     <div class="text-center py-2 small text-muted" style="border-top:1px solid #e5e7eb;">
-      &copy; 2026 Afia Borka House All Rights Reserved &nbsp;|&nbsp;
-      <a href="privacy-policy.html" style="color:#1a5dc8;text-decoration:none;">Privacy Policy</a>
+      &copy; 2026 Afia Borka House All Rights Reserved.
     </div>
   </footer>
 
@@ -511,8 +511,8 @@
     <div class="mob-nav-items">
       <a href="index.html" class="mob-nav-item"><i class="bi bi-house-fill"></i><span>Home</span></a>
       <a href="category.html" class="mob-nav-item"><i class="bi bi-grid-fill"></i><span>Category</span></a>
-      <a href="product.html" class="mob-nav-center"><div class="eid-circle"><i class="bi bi-stars"></i></div><span class="eid-circle-label">Eid Fest</span></a>
-      <a href="#" class="mob-nav-item"><i class="bi bi-cart-fill"></i><span>Cart</span></a>
+      <a href="products.html" class="mob-nav-center"><div class="eid-circle"><i class="bi bi-stars"></i></div><span class="eid-circle-label">Eid Fest</span></a>
+      <a href="cart.html" class="mob-nav-item"><i class="bi bi-cart-fill"></i><span>Cart</span></a>
       <a href="#" class="mob-nav-item" onclick="openMobAccount(event)"><i class="bi bi-person-fill"></i><span>Account</span></a>
     </div>
   </nav>
@@ -573,7 +573,7 @@
   <div class="mob-account-links">
     <a href="login.html">Login</a>
     <a href="register.html">Register</a>
-    <a href="#">Order Tracking</a>
+    <a href="order-tracking.html">Order Tracking</a>
   </div>
 </div>
 

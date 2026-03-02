@@ -1,19 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Afia Borka House</title>
-  <meta name="description" content="Read the Privacy Policy of Afia Borka House. Understand how we collect, use, and protect your personal information." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Tracking | Afia Borka House</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .order-tracking-card {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 40px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .track-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .track-subtitle {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .track-form label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .track-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+    .track-input:focus {
+      outline: none;
+      border-color: #1a5dc8;
+      box-shadow: 0 0 0 3px rgba(26, 93, 200, 0.1);
+    }
+    .track-btn {
+      width: 100%;
+      padding: 14px;
+      background: #1a5dc8;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .track-btn:hover {
+      background: #1e40af;
+    }
+    @media (max-width: 576px) {
+      .order-tracking-card {
+        padding: 30px 20px;
+        margin: 20px 15px;
+      }
+    }
+  </style>
 </head>
-
 <body class="pp-body">
 <!-- TOP HEADER -->
 <header class="top-header">
@@ -96,122 +159,79 @@
           </div>
           <div class="cat-sub-panel active" id="panel-clothing">
             <h6>Clothing &amp; Fashion</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Men's Panjabi</a><a href="#" class="sub-link">Men's Casual
-                Shirt</a><a href="#" class="sub-link">Men's Formal Shirt</a><a href="#" class="sub-link">Men's T-Shirt
-                &amp; Polo</a><a href="#" class="sub-link">Men's Trouser &amp; Pant</a><a href="#"
-                class="sub-link">Men's Winter Collection</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Women's Saree</a><a href="#" class="sub-link">Women's
-                Kurti &amp; Tops</a><a href="#" class="sub-link">Women's Salwar Kameez</a><a href="#"
-                class="sub-link">Women's Winter Collection</a><a href="#" class="sub-link">Boys Polo &amp; T-Shirt</a><a
-                href="#" class="sub-link">Girls Tops &amp; Ethnic</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Kids Winter Collection</a><a href="#" class="sub-link">EID
-                Collection 2026</a><a href="#" class="sub-link">Fashion Tops</a><a href="#" class="sub-link">Comforter
-                &amp; Bedding</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Men's Panjabi</a><a href="#" class="sub-link">Men's Casual Shirt</a><a href="#" class="sub-link">Men's Formal Shirt</a><a href="#" class="sub-link">Men's T-Shirt &amp; Polo</a><a href="#" class="sub-link">Men's Trouser &amp; Pant</a><a href="#" class="sub-link">Men's Winter Collection</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Women's Saree</a><a href="#" class="sub-link">Women's Kurti &amp; Tops</a><a href="#" class="sub-link">Women's Salwar Kameez</a><a href="#" class="sub-link">Women's Winter Collection</a><a href="#" class="sub-link">Boys Polo &amp; T-Shirt</a><a href="#" class="sub-link">Girls Tops &amp; Ethnic</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Kids Winter Collection</a><a href="#" class="sub-link">EID Collection 2026</a><a href="#" class="sub-link">Fashion Tops</a><a href="#" class="sub-link">Comforter &amp; Bedding</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-footwear">
             <h6>Footwear</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Men's Formal Shoes</a><a href="#" class="sub-link">Men's
-                Casual Shoes</a><a href="#" class="sub-link">Men's Sandals &amp; Slippers</a><a href="#"
-                class="sub-link">Men's Loafers</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Women's Heels</a><a href="#" class="sub-link">Women's
-                Flats</a><a href="#" class="sub-link">Women's Sandals</a><a href="#" class="sub-link">Kids Footwear</a>
-            </div>
+            <div class="sub-col"><a href="#" class="sub-link">Men's Formal Shoes</a><a href="#" class="sub-link">Men's Casual Shoes</a><a href="#" class="sub-link">Men's Sandals &amp; Slippers</a><a href="#" class="sub-link">Men's Loafers</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Women's Heels</a><a href="#" class="sub-link">Women's Flats</a><a href="#" class="sub-link">Women's Sandals</a><a href="#" class="sub-link">Kids Footwear</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-fashion-acc">
             <h6>Fashion Accessories</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Sunglasses</a><a href="#" class="sub-link">Watches</a><a
-                href="#" class="sub-link">Hats &amp; Caps</a><a href="#" class="sub-link">Scarves &amp; Shawls</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Jewellery &amp; Ornaments</a><a href="#"
-                class="sub-link">Hair Accessories</a><a href="#" class="sub-link">Ties &amp; Bow Ties</a><a href="#"
-                class="sub-link">Cufflinks &amp; Pins</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Sunglasses</a><a href="#" class="sub-link">Watches</a><a href="#" class="sub-link">Hats &amp; Caps</a><a href="#" class="sub-link">Scarves &amp; Shawls</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Jewellery &amp; Ornaments</a><a href="#" class="sub-link">Hair Accessories</a><a href="#" class="sub-link">Ties &amp; Bow Ties</a><a href="#" class="sub-link">Cufflinks &amp; Pins</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-lifestyle-acc">
             <h6>Lifestyle Accessories</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Men's Wallet</a><a href="#" class="sub-link">Men's
-                Belt</a><a href="#" class="sub-link">Bags &amp; Backpacks</a><a href="#" class="sub-link">Luggage &amp;
-                Travel</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Women's Handbag</a><a href="#" class="sub-link">Women's
-                Clutch</a><a href="#" class="sub-link">Keychains &amp; Holders</a><a href="#"
-                class="sub-link">Umbrellas</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Men's Wallet</a><a href="#" class="sub-link">Men's Belt</a><a href="#" class="sub-link">Bags &amp; Backpacks</a><a href="#" class="sub-link">Luggage &amp; Travel</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Women's Handbag</a><a href="#" class="sub-link">Women's Clutch</a><a href="#" class="sub-link">Keychains &amp; Holders</a><a href="#" class="sub-link">Umbrellas</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-personal-care">
             <h6>Personal Care</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Perfumes &amp; Deodorants</a><a href="#"
-                class="sub-link">Hair Care</a><a href="#" class="sub-link">Skin Care</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Shaving &amp; Grooming</a><a href="#"
-                class="sub-link">Bath &amp; Body</a><a href="#" class="sub-link">Oral Care</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Perfumes &amp; Deodorants</a><a href="#" class="sub-link">Hair Care</a><a href="#" class="sub-link">Skin Care</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Shaving &amp; Grooming</a><a href="#" class="sub-link">Bath &amp; Body</a><a href="#" class="sub-link">Oral Care</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-health-beauty">
             <h6>Health &amp; Beauty</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Vitamins &amp; Supplements</a><a href="#"
-                class="sub-link">Makeup &amp; Cosmetics</a><a href="#" class="sub-link">Face Care</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Fitness Equipment</a><a href="#" class="sub-link">Medical
-                Devices</a><a href="#" class="sub-link">Eye Care</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Vitamins &amp; Supplements</a><a href="#" class="sub-link">Makeup &amp; Cosmetics</a><a href="#" class="sub-link">Face Care</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Fitness Equipment</a><a href="#" class="sub-link">Medical Devices</a><a href="#" class="sub-link">Eye Care</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-home-decor">
             <h6>Home Decor</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Bed Sheets &amp; Pillow Covers</a><a href="#"
-                class="sub-link">Comforters &amp; Quilts</a><a href="#" class="sub-link">Curtains &amp; Blinds</a><a
-                href="#" class="sub-link">Wall Art &amp; Paintings</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Rugs &amp; Carpets</a><a href="#" class="sub-link">Lamps
-                &amp; Lighting</a><a href="#" class="sub-link">Photo Frames</a><a href="#" class="sub-link">Candles
-                &amp; Holders</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Bed Sheets &amp; Pillow Covers</a><a href="#" class="sub-link">Comforters &amp; Quilts</a><a href="#" class="sub-link">Curtains &amp; Blinds</a><a href="#" class="sub-link">Wall Art &amp; Paintings</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Rugs &amp; Carpets</a><a href="#" class="sub-link">Lamps &amp; Lighting</a><a href="#" class="sub-link">Photo Frames</a><a href="#" class="sub-link">Candles &amp; Holders</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-handicrafts">
             <h6>Handicrafts</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Nakshi Kantha</a><a href="#" class="sub-link">Pottery
-                &amp; Ceramics</a><a href="#" class="sub-link">Jute Products</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Wooden Crafts</a><a href="#" class="sub-link">Bamboo
-                Products</a><a href="#" class="sub-link">Handloom Textiles</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Nakshi Kantha</a><a href="#" class="sub-link">Pottery &amp; Ceramics</a><a href="#" class="sub-link">Jute Products</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Wooden Crafts</a><a href="#" class="sub-link">Bamboo Products</a><a href="#" class="sub-link">Handloom Textiles</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-appliance">
             <h6>Appliance</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Kitchen Appliances</a><a href="#" class="sub-link">Air
-                Conditioner</a><a href="#" class="sub-link">Refrigerator</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Washing Machine</a><a href="#" class="sub-link">Vacuum
-                Cleaner</a><a href="#" class="sub-link">Iron &amp; Steamers</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Kitchen Appliances</a><a href="#" class="sub-link">Air Conditioner</a><a href="#" class="sub-link">Refrigerator</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Washing Machine</a><a href="#" class="sub-link">Vacuum Cleaner</a><a href="#" class="sub-link">Iron &amp; Steamers</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-gift-cards">
             <h6>Gift Cards</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Afia Borka House Gift Card</a><a href="#" class="sub-link">DHEU Gift
-                Card</a><a href="#" class="sub-link">Festival Gift Card</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Corporate Gift Cards</a><a href="#"
-                class="sub-link">E-Gift Vouchers</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Afia Borka House Gift Card</a><a href="#" class="sub-link">DHEU Gift Card</a><a href="#" class="sub-link">Festival Gift Card</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Corporate Gift Cards</a><a href="#" class="sub-link">E-Gift Vouchers</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-auto">
             <h6>Automotives &amp; Motorbikes</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Helmets</a><a href="#" class="sub-link">Riding Gear</a><a
-                href="#" class="sub-link">Car Accessories</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Bike Accessories</a><a href="#" class="sub-link">Cleaning
-                Products</a><a href="#" class="sub-link">Spare Parts</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Helmets</a><a href="#" class="sub-link">Riding Gear</a><a href="#" class="sub-link">Car Accessories</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Bike Accessories</a><a href="#" class="sub-link">Cleaning Products</a><a href="#" class="sub-link">Spare Parts</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-sports">
             <h6>Riding, Sports &amp; Fitness</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Gym Equipment</a><a href="#" class="sub-link">Yoga &amp;
-                Pilates</a><a href="#" class="sub-link">Cycling Gear</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Cricket</a><a href="#" class="sub-link">Football</a><a
-                href="#" class="sub-link">Sports Apparel</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Gym Equipment</a><a href="#" class="sub-link">Yoga &amp; Pilates</a><a href="#" class="sub-link">Cycling Gear</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Cricket</a><a href="#" class="sub-link">Football</a><a href="#" class="sub-link">Sports Apparel</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-phones">
             <h6>Phones &amp; Tablets</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Smartphones</a><a href="#" class="sub-link">Tablets</a><a
-                href="#" class="sub-link">Phone Cases &amp; Covers</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Screen Protectors</a><a href="#" class="sub-link">Chargers
-                &amp; Cables</a><a href="#" class="sub-link">Earphones &amp; Headphones</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Smartphones</a><a href="#" class="sub-link">Tablets</a><a href="#" class="sub-link">Phone Cases &amp; Covers</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Screen Protectors</a><a href="#" class="sub-link">Chargers &amp; Cables</a><a href="#" class="sub-link">Earphones &amp; Headphones</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-food">
             <h6>Food &amp; Snacks</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Dry Fruits &amp; Nuts</a><a href="#"
-                class="sub-link">Biscuits &amp; Cookies</a><a href="#" class="sub-link">Chocolates &amp; Candy</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Instant Noodles</a><a href="#" class="sub-link">Tea &amp;
-                Coffee</a><a href="#" class="sub-link">Organic &amp; Healthy</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Dry Fruits &amp; Nuts</a><a href="#" class="sub-link">Biscuits &amp; Cookies</a><a href="#" class="sub-link">Chocolates &amp; Candy</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Instant Noodles</a><a href="#" class="sub-link">Tea &amp; Coffee</a><a href="#" class="sub-link">Organic &amp; Healthy</a></div>
           </div>
           <div class="cat-sub-panel" id="panel-books">
             <h6>Books &amp; Stationery Items</h6>
-            <div class="sub-col"><a href="#" class="sub-link">Fiction &amp; Literature</a><a href="#"
-                class="sub-link">Islamic Books</a><a href="#" class="sub-link">Academic Books</a></div>
-            <div class="sub-col"><a href="#" class="sub-link">Notebooks &amp; Diaries</a><a href="#"
-                class="sub-link">Office Stationery</a><a href="#" class="sub-link">Art Supplies</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Fiction &amp; Literature</a><a href="#" class="sub-link">Islamic Books</a><a href="#" class="sub-link">Academic Books</a></div>
+            <div class="sub-col"><a href="#" class="sub-link">Notebooks &amp; Diaries</a><a href="#" class="sub-link">Office Stationery</a><a href="#" class="sub-link">Art Supplies</a></div>
           </div>
         </div>
       </div>
@@ -340,60 +360,42 @@
           </div>
         </div>
 
-        <a href="about.html" class="active">About</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
       <a href="outlets.html" class="outlets-btn d-none d-lg-block"><i class="fa fa-store"></i>Outlets</a>
     </div>
   </nav>
 
-    <!-- BREADCRUMB -->
+  <!-- BREADCRUMB -->
   <div class="pp-breadcrumb">
     <div class="bc-inner">
       <a href="index.html">Home</a>
       <span class="sep">/</span>
-      <span class="current">About</span>
+      <span class="current">Order Tracking</span>
     </div>
   </div>
 
-  <!-- ABOUT US SECTION -->
+  <!-- ORDER TRACKING SECTION -->
   <div class="section pp-page">
-    <div class="container-site pp-card" style="padding: 40px 20px;">
-      
-      <div class="text-center" style="padding: 40px 20px; background: #f8fafc; border-radius: 12px; margin-bottom: 30px;">
-        <h1 style="font-size: 36px; font-weight: 800; color: #111827; margin-bottom: 16px;">About Afia Borka House</h1>
-        <p style="font-size: 16px; color: #4b5563; max-width: 700px; margin: 0 auto; line-height: 1.6;">Your Ultimate Fashion & Lifestyle destination in Bangladesh. We bring you the latest trends confidently, ensuring quality, elegance, and comfort for every occasion.</p>
-      </div>
-      
-      <div class="row gy-4 align-items-center" style="margin-bottom: 40px;">
-        <div class="col-md-6">
-          <img src="img/about.jpg" onerror="this.src='https://picsum.photos/seed/about-afia/600/400'" alt="About Afia Borka House" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        </div>
-        <div class="col-md-6 text-md-start text-center" style="padding: 0 30px;">
-          <h3 style="font-weight: 700; color: #1f2937; margin-bottom: 20px;">Our Story</h3>
-          <p style="color: #4b5563; line-height: 1.7; font-size: 15px;">Afia Borka House started with a vision to revolutionize modest fashion in Bangladesh. Over the years, we have curated an extensive collection of borkas, hijabs, and modern Islamic wear, blending traditional values with contemporary styles.</p>
-          <p style="color: #4b5563; line-height: 1.7; font-size: 15px;">We believe in empowering individuals through fashion that respects their values without compromising on aesthetics. Every piece in our collection is carefully selected to offer premium quality and exceptional value.</p>
-        </div>
-      </div>
-      
-      <!-- MISSION VISION -->
-      <div class="row gy-4 text-center">
-        <div class="col-md-6">
-          <div style="padding: 30px; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; height: 100%;">
-            <i class="bi bi-bullseye" style="font-size: 40px; color: #1a5dc8; margin-bottom: 15px; display: inline-block;"></i>
-            <h4 style="font-weight: 700; margin-bottom: 15px; color: #111827;">Our Mission</h4>
-            <p style="color: #4b5563; line-height: 1.6; font-size: 14px;">To provide high-quality, modest fashion accessible to everyone, ensuring our customers feel confident and graceful in their everyday lives.</p>
+    <div class="container-site">
+      <div class="order-tracking-card">
+        <h1 class="track-title">Track Your Order</h1>
+        <p class="track-subtitle">
+          To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.
+        </p>
+        <form class="track-form" onsubmit="event.preventDefault(); alert('Tracking feature coming soon!');">
+          <div class="form-group">
+            <label for="orderId">Order ID</label>
+            <input type="text" id="orderId" class="track-input" placeholder="Found in your order confirmation email" required />
           </div>
-        </div>
-        <div class="col-md-6">
-          <div style="padding: 30px; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; height: 100%;">
-            <i class="bi bi-eye-fill" style="font-size: 40px; color: #1a5dc8; margin-bottom: 15px; display: inline-block;"></i>
-            <h4 style="font-weight: 700; margin-bottom: 15px; color: #111827;">Our Vision</h4>
-            <p style="color: #4b5563; line-height: 1.6; font-size: 14px;">To be the leading modest fashion brand in Bangladesh and globally, recognized for our commitment to quality, style, and customer satisfaction.</p>
+          <div class="form-group">
+            <label for="billingEmail">Billing Email</label>
+            <input type="email" id="billingEmail" class="track-input" placeholder="Email you used during checkout" required />
           </div>
-        </div>
+          <button type="submit" class="track-btn">Track</button>
+        </form>
       </div>
-      
     </div>
   </div>
 
@@ -435,7 +437,7 @@
           <li class="mb-1"><a href="blog.html" style="color:#6b7280;text-decoration:none;">Blogs</a></li>
             <li class="mb-1"><a href="outlets.html" style="color:#6b7280;text-decoration:none;">Outlets</a></li>
             <li class="mb-1"><a href="careers.html" style="color:#6b7280;text-decoration:none;">Careers</a></li>
-          <li class="mb-1"><a href="about.html" style="color:#1a5dc8;text-decoration:none;font-weight:500;">About Us</a></li>
+          <li class="mb-1"><a href="about.html" style="color:#6b7280;text-decoration:none;">About Us</a></li>
             <li class="mb-1"><a href="contact.html" style="color:#6b7280;text-decoration:none;">Contact Us</a></li>
           </ul>
         </div>
@@ -533,15 +535,6 @@
         item.classList.add('active');
       });
     });
-
-    // Smooth scroll for TOC links
-    document.querySelectorAll('.pp-toc a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
   </script>
 
 <!-- Mobile Account Sidebar -->
@@ -558,7 +551,7 @@
   <div class="mob-account-links">
     <a href="login.html">Login</a>
     <a href="register.html">Register</a>
-    <a href="order-tracking.html">Order Tracking</a>
+    <a href="order-tracking.html" class="active">Order Tracking</a>
   </div>
 </div>
 
@@ -576,7 +569,4 @@
 </script>
 
 </body>
-
 </html>
-
-
