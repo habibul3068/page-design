@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Womens Ethnic 3 Pcs | Afia Borka House</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- TOP HEADER -->
+<header class="top-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo-wrap">
+      <img src="img/logo.png" class="header-logo" alt="Afia Borka House">
+    </a>
+    <div class="search-wrap">
+      <input type="text" placeholder="I'm shopping for ..."/>
+      <button class="search-btn"><i class="fa fa-magnifying-glass"></i></button>
+    </div>
+    <div class="header-icons">
+      <button class="icon-btn mob-search-icon d-md-none"><i class="fa fa-magnifying-glass"></i></button>
+      <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
+      <button class="icon-btn position-relative d-none d-md-flex">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-badge">0</span>
+      </button>
+      <div class="my-account-wrap d-none d-md-block">
+        <button class="my-account-btn">
+          <span class="avatar-circle"><i class="fa-regular fa-user"></i></span>
+          <span>My Account</span>
+        </button>
+        <div class="account-dropdown">
+          <a href="login.html"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a>
+          <a href="register.html"><i class="fa-solid fa-user-plus me-2"></i>Register</a>
+          <a href="#"><i class="fa-solid fa-box me-2"></i>Order Tracking</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- SECONDARY NAV -->
+<nav class="sec-nav">
+  <div class="sec-nav-inner">
+    <div class="cat-dropdown-wrap d-none d-lg-block">
+      <button class="shop-cat-btn" id="shopCatBtn" onclick="toggleCatDropdown()">
+        <i class="fa fa-bars"></i><span class="cat-btn-text">Shop By Category</span>
+      </button>
+      <div class="cat-dropdown" id="catDropdown">
+        <div class="cat-list">
+          <div class="cat-list-item active" onmouseenter="showPanel('clothing',this)">Clothing &amp; Fashion <i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('footwear',this)">Footwear<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('fashion-acc',this)">Fashion Accessories<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('lifestyle-acc',this)">Lifestyle Accessories<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('personal-care',this)">Personal Care<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('health-beauty',this)">Health &amp; Beauty<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('home-decor',this)">Home Decorations<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('handicrafts',this)">Handicrafts<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('appliance',this)">Appliance<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('gift-cards',this)">Gift Cards<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('auto',this)">Automotives &amp; Motorbikes<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('sports',this)">Riding, Sports &amp; Fitness<i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('phones',this)">Phones &amp; Tablets <i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('food',this)">Food &amp; Snacks <i class="bi bi-chevron-right"></i></div>
+          <div class="cat-list-item" onmouseenter="showPanel('books',this)">Books &amp; Stationery Items <i class="bi bi-chevron-right"></i></div>
+        </div>
+        <div class="cat-sub-panel active" id="panel-clothing"><h6>Clothing &amp; Fashion</h6><div class="sub-col"><a href="#" class="sub-link">Men's Panjabi</a><a href="#" class="sub-link">Men's Casual Shirt</a><a href="#" class="sub-link">Men's Formal Shirt</a><a href="#" class="sub-link">Men's T-Shirt &amp; Polo</a><a href="#" class="sub-link">Men's Trouser &amp; Pant</a><a href="#" class="sub-link">Men's Winter Collection</a></div><div class="sub-col"><a href="#" class="sub-link">Women's Saree</a><a href="#" class="sub-link">Women's Kurti &amp; Tops</a><a href="#" class="sub-link">Women's Salwar Kameez</a><a href="#" class="sub-link">Women's Winter Collection</a><a href="#" class="sub-link">Boys Polo &amp; T-Shirt</a><a href="#" class="sub-link">Girls Tops &amp; Ethnic</a></div><div class="sub-col"><a href="#" class="sub-link">Kids Winter Collection</a><a href="#" class="sub-link">EID Collection 2026</a><a href="#" class="sub-link">Fashion Tops</a><a href="#" class="sub-link">Comforter &amp; Bedding</a></div></div>
+        <div class="cat-sub-panel" id="panel-footwear"><h6>Footwear</h6><div class="sub-col"><a href="#" class="sub-link">Men's Formal Shoes</a><a href="#" class="sub-link">Men's Casual Shoes</a><a href="#" class="sub-link">Men's Sandals &amp; Slippers</a><a href="#" class="sub-link">Men's Loafers</a></div><div class="sub-col"><a href="#" class="sub-link">Women's Heels</a><a href="#" class="sub-link">Women's Flats</a><a href="#" class="sub-link">Women's Sandals</a><a href="#" class="sub-link">Kids Footwear</a></div></div>
+        <div class="cat-sub-panel" id="panel-fashion-acc"><h6>Fashion Accessories</h6><div class="sub-col"><a href="#" class="sub-link">Sunglasses</a><a href="#" class="sub-link">Watches</a><a href="#" class="sub-link">Hats &amp; Caps</a><a href="#" class="sub-link">Scarves &amp; Shawls</a></div><div class="sub-col"><a href="#" class="sub-link">Jewellery &amp; Ornaments</a><a href="#" class="sub-link">Hair Accessories</a><a href="#" class="sub-link">Ties &amp; Bow Ties</a><a href="#" class="sub-link">Cufflinks &amp; Pins</a></div></div>
+        <div class="cat-sub-panel" id="panel-lifestyle-acc"><h6>Lifestyle Accessories</h6><div class="sub-col"><a href="#" class="sub-link">Men's Wallet</a><a href="#" class="sub-link">Men's Belt</a><a href="#" class="sub-link">Bags &amp; Backpacks</a><a href="#" class="sub-link">Luggage &amp; Travel</a></div><div class="sub-col"><a href="#" class="sub-link">Women's Handbag</a><a href="#" class="sub-link">Women's Clutch</a><a href="#" class="sub-link">Keychains &amp; Holders</a><a href="#" class="sub-link">Umbrellas</a></div></div>
+        <div class="cat-sub-panel" id="panel-personal-care"><h6>Personal Care</h6><div class="sub-col"><a href="#" class="sub-link">Perfumes &amp; Deodorants</a><a href="#" class="sub-link">Hair Care</a><a href="#" class="sub-link">Skin Care</a></div><div class="sub-col"><a href="#" class="sub-link">Shaving &amp; Grooming</a><a href="#" class="sub-link">Bath &amp; Body</a><a href="#" class="sub-link">Oral Care</a></div></div>
+        <div class="cat-sub-panel" id="panel-health-beauty"><h6>Health &amp; Beauty</h6><div class="sub-col"><a href="#" class="sub-link">Vitamins &amp; Supplements</a><a href="#" class="sub-link">Makeup &amp; Cosmetics</a><a href="#" class="sub-link">Face Care</a></div><div class="sub-col"><a href="#" class="sub-link">Fitness Equipment</a><a href="#" class="sub-link">Medical Devices</a><a href="#" class="sub-link">Eye Care</a></div></div>
+        <div class="cat-sub-panel" id="panel-home-decor"><h6>Home Decorations</h6><div class="sub-col"><a href="#" class="sub-link">Bed Sheets &amp; Pillow Covers</a><a href="#" class="sub-link">Comforters &amp; Quilts</a><a href="#" class="sub-link">Curtains &amp; Blinds</a><a href="#" class="sub-link">Wall Art &amp; Paintings</a></div><div class="sub-col"><a href="#" class="sub-link">Rugs &amp; Carpets</a><a href="#" class="sub-link">Lamps &amp; Lighting</a><a href="#" class="sub-link">Photo Frames</a><a href="#" class="sub-link">Candles &amp; Holders</a></div></div>
+        <div class="cat-sub-panel" id="panel-handicrafts"><h6>Handicrafts</h6><div class="sub-col"><a href="#" class="sub-link">Nakshi Kantha</a><a href="#" class="sub-link">Pottery &amp; Ceramics</a><a href="#" class="sub-link">Jute Products</a></div><div class="sub-col"><a href="#" class="sub-link">Wooden Crafts</a><a href="#" class="sub-link">Bamboo Products</a><a href="#" class="sub-link">Handloom Textiles</a></div></div>
+        <div class="cat-sub-panel" id="panel-appliance"><h6>Appliance</h6><div class="sub-col"><a href="#" class="sub-link">Kitchen Appliances</a><a href="#" class="sub-link">Air Conditioner</a><a href="#" class="sub-link">Refrigerator</a></div><div class="sub-col"><a href="#" class="sub-link">Washing Machine</a><a href="#" class="sub-link">Vacuum Cleaner</a><a href="#" class="sub-link">Iron &amp; Steamers</a></div></div>
+        <div class="cat-sub-panel" id="panel-gift-cards"><h6>Gift Cards</h6><div class="sub-col"><a href="#" class="sub-link">Afia Borka House Gift Card</a><a href="#" class="sub-link">Festival Gift Card</a></div><div class="sub-col"><a href="#" class="sub-link">Corporate Gift Cards</a><a href="#" class="sub-link">E-Gift Vouchers</a></div></div>
+        <div class="cat-sub-panel" id="panel-auto"><h6>Automotives &amp; Motorbikes</h6><div class="sub-col"><a href="#" class="sub-link">Helmets</a><a href="#" class="sub-link">Riding Gear</a><a href="#" class="sub-link">Car Accessories</a></div><div class="sub-col"><a href="#" class="sub-link">Bike Accessories</a><a href="#" class="sub-link">Cleaning Products</a><a href="#" class="sub-link">Spare Parts</a></div></div>
+        <div class="cat-sub-panel" id="panel-sports"><h6>Riding, Sports &amp; Fitness</h6><div class="sub-col"><a href="#" class="sub-link">Gym Equipment</a><a href="#" class="sub-link">Yoga &amp; Pilates</a><a href="#" class="sub-link">Cycling Gear</a></div><div class="sub-col"><a href="#" class="sub-link">Cricket</a><a href="#" class="sub-link">Football</a><a href="#" class="sub-link">Sports Apparel</a></div></div>
+        <div class="cat-sub-panel" id="panel-phones"><h6>Phones &amp; Tablets</h6><div class="sub-col"><a href="#" class="sub-link">Smartphones</a><a href="#" class="sub-link">Tablets</a><a href="#" class="sub-link">Phone Cases &amp; Covers</a></div><div class="sub-col"><a href="#" class="sub-link">Screen Protectors</a><a href="#" class="sub-link">Chargers &amp; Cables</a><a href="#" class="sub-link">Earphones &amp; Headphones</a></div></div>
+        <div class="cat-sub-panel" id="panel-food"><h6>Food &amp; Snacks</h6><div class="sub-col"><a href="#" class="sub-link">Dry Fruits &amp; Nuts</a><a href="#" class="sub-link">Biscuits &amp; Cookies</a><a href="#" class="sub-link">Chocolates &amp; Candy</a></div><div class="sub-col"><a href="#" class="sub-link">Instant Noodles</a><a href="#" class="sub-link">Tea &amp; Coffee</a><a href="#" class="sub-link">Organic &amp; Healthy</a></div></div>
+        <div class="cat-sub-panel" id="panel-books"><h6>Books &amp; Stationery Items</h6><div class="sub-col"><a href="#" class="sub-link">Fiction &amp; Literature</a><a href="#" class="sub-link">Islamic Books</a><a href="#" class="sub-link">Academic Books</a></div><div class="sub-col"><a href="#" class="sub-link">Notebooks &amp; Diaries</a><a href="#" class="sub-link">Office Stationery</a><a href="#" class="sub-link">Art Supplies</a></div></div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="category.html">Category</a>
+      <a href="product.html" class="active">Products</a>
+
+      <div class="nav-item d-none d-lg-block">
+        <a href="#" class="eid-fest">EID-UL-FITR 26</a>
+        <div class="mega-drop eid-drop">
+          <div class="container-site">
+            <div class="d-flex align-items-start">
+              <div class="eid-links">
+                <a href="#">MENS</a>
+                <a href="#">WOMENS</a>
+                <a href="#">BOYS</a>
+                <a href="#">GIRLS</a>
+                <a href="#">KIDS DRESS</a>
+                <a href="#">FESTIVAL SETS</a>
+              </div>
+              <div class="eid-imgs">
+                <a href="#"><img src="img/men.png" alt="Mens"/></a>
+                <a href="#"><img src="img/women.png" alt="Womens"/></a>
+                <a href="#"><img src="img/kids.png" alt="Kids"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item d-none d-lg-block">
+        <a href="#">Mens</a>
+        <div class="mega-drop cat-drop">
+          <div class="container-site">
+            <div class="d-flex gap-4">
+              <div class="cat-col" style="min-width:145px">
+                <div class="cat-col-title">Mens Top Wear</div>
+                <a href="#">Mens Panjabi</a>
+                <a href="#">Mens Casual Shirt</a>
+                <a href="#">Mens Formal Shirt</a>
+                <a href="#">Mens T-Shirt</a>
+              </div>
+              <div class="cat-col" style="min-width:145px">
+                <div class="cat-col-title">Mens Bottom Wear</div>
+                <a href="#">Mens Formal Pant</a>
+                <a href="#">Mens Jeans</a>
+                <a href="#">Mens Joggers</a>
+                <a href="#">Mens Shorts</a>
+              </div>
+              <div class="cat-col" style="min-width:145px">
+                <div class="cat-col-title">Sports &amp; Innerwear</div>
+                <a href="#">Mens Sports Wear</a>
+                <a href="#">Mens Innerwear</a>
+                <a href="#">Winter Collection</a>
+              </div>
+              <div class="ms-auto d-none d-xl-block flex-shrink-0">
+                <a href="#"><img src="img/men.png" class="cat-drop-img" alt="Mens"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item d-none d-lg-block">
+        <a href="#">Womens</a>
+        <div class="mega-drop cat-drop">
+          <div class="container-site">
+            <div class="d-flex gap-4">
+              <div class="cat-col" style="min-width:155px">
+                <div class="cat-col-title">Womens Top Wear</div>
+                <a href="#">Single Ethnic</a>
+                <a href="#">Fashion Tops</a>
+                <a href="#">Woman Shirt</a>
+                <a href="#">Maternity Wear</a>
+              </div>
+              <div class="cat-col" style="min-width:155px">
+                <div class="cat-col-title">Womens Bottom Wear</div>
+                <a href="#">Womens Pant</a>
+                <a href="#">Womens Chino Pant</a>
+                <a href="#">Womens Jeans</a>
+                <a href="#">Womens Skirt</a>
+              </div>
+              <div class="cat-col" style="min-width:155px">
+                <div class="cat-col-title">Occasion Wear</div>
+                <a href="#">Womens Jumpsuit</a>
+                <a href="#">Western Gown</a>
+                <a href="#">Party Wear</a>
+              </div>
+              <div class="ms-auto d-none d-xl-block flex-shrink-0">
+                <a href="#"><img src="img/women.png" class="cat-drop-img" alt="Womens"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item d-none d-lg-block">
+        <a href="#">Kids</a>
+        <div class="mega-drop cat-drop">
+          <div class="container-site">
+            <div class="d-flex gap-4">
+              <div class="cat-col" style="min-width:145px">
+                <div class="cat-col-title">New Born</div>
+                <a href="#">3 to 18 (Month)</a>
+                <a href="#">Boys</a>
+                <a href="#">Girls</a>
+              </div>
+              <div class="cat-col" style="min-width:145px">
+                <div class="cat-col-title">Baby Boys</div>
+                <a href="#">Polo &amp; T-Shirt</a>
+                <a href="#">Panjabi &amp; Kabli</a>
+                <a href="#">Pant &amp; Payjama</a>
+              </div>
+              <div class="cat-col" style="min-width:145px">
+                <div class="cat-col-title">Baby Girls</div>
+                <a href="#">Girls Kurti</a>
+                <a href="#">Frock &amp; Dungaree</a>
+                <a href="#">Tops &amp; Skirt</a>
+              </div>
+              <div class="ms-auto d-none d-xl-block flex-shrink-0">
+                <a href="#"><img src="img/kids.png" class="cat-drop-img" alt="Kids"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a href="about.html">About</a>
+    </div>
+    <a href="#" class="outlets-btn d-none d-lg-block"><i class="fa fa-store"></i>Outlets</a>
+  </div>
+</nav>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     BREADCRUMB
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="#">Home</a><span class="sep">/</span>
+    <a href="#">Clothing &amp; Fashion</a><span class="sep">/</span>
+    <a href="#">Womens</a><span class="sep">/</span>
+    <a href="#">Ethnic Set (2 &amp; 3 Pcs)</a><span class="sep">/</span>
+    <a href="#">Womens Top Wear</a><span class="sep">/</span>
+    <span class="current">WOMENS ETHNIC 3 PCS</span>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     PRODUCT MAIN SECTION
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="main-layout">
+  <div class="container-site">
+    <div class="row g-3">
+
+      <!-- â”€â”€ LEFT: Image Gallery â”€â”€ -->
+      <div class="col-lg-5 col-md-5 gallery-col pe-md-3">
+
+        <!-- Main Image -->
+        <div class="main-img-wrap">
+          <img src="3pcs.png" alt="Womens Ethnic 3 Pcs â€“ Cinnamon" id="mainImg"
+               onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=560&h=740&fit=crop'"/>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="thumb-row">
+          <div class="thumb active" onclick="switchImg(this, '3pcs.png', 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=560&h=740&fit=crop')">
+            <img src="3pcs.png" alt=""
+                 onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=140&h=160&fit=crop'"/>
+          </div>
+          <div class="thumb" onclick="switchImg(this, 'https://images.unsplash.com/photo-1594938298603-c8148c4b4d43?w=560&h=740&fit=crop')">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b4d43?w=140&h=160&fit=crop" alt="View 2" loading="lazy"/>
+          </div>
+          <div class="thumb" onclick="switchImg(this, 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=560&h=740&fit=crop')">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=140&h=160&fit=crop" alt="View 3" loading="lazy"/>
+          </div>
+          <div class="thumb" onclick="switchImg(this, 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=560&h=740&fit=crop')">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=140&h=160&fit=crop" alt="View 4" loading="lazy"/>
+          </div>
+        </div>
+      </div><!-- /gallery col -->
+
+      <!-- â”€â”€ RIGHT: Product Info â”€â”€ -->
+      <div class="col-lg-7 col-md-7 product-info-col">
+
+        <h1 class="product-title">WOMENS ETHNIC 3 PCS</h1>
+
+        <div class="brand-row">
+          <span>Brand : <a href="#">Afia Borka House</a></span>
+          <button class="wishlist-btn" id="wishBtn" onclick="toggleWish()" title="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+
+        <!-- Price -->
+        <div class="price-wrap">
+          <div class="price-accent"></div>
+          <div class="price-value"><span class="currency">Tk.</span>6690</div>
+        </div>
+
+        <!-- SKU / Seller -->
+        <div class="meta-row">
+          <strong>SKU/Style :</strong> FAMI1WKZ15FJA
+          <span class="meta-divider">|</span>
+          <strong>Sold by :</strong> Afia Borka House&nbsp;
+          <a href="#">(Visit Online Store)</a>
+        </div>
+
+        <!-- Color -->
+        <div class="section-label">Color : <span style="font-weight:400;color:#555;">Cinnamon</span></div>
+        <div class="color-swatch-wrap">
+          <div class="color-swatch active">
+            <img src="3pcs.png" alt="Cinnamon"
+                 onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=80&h=90&fit=crop'"/>
+          </div>
+        </div>
+
+        <!-- Size -->
+        <div class="section-label" style="margin-top:16px;">Size :</div>
+        <div class="size-btns" id="sizeBtns">
+          <button class="size-btn active" onclick="selectSize(this)">S</button>
+          <button class="size-btn" onclick="selectSize(this)">M</button>
+          <button class="size-btn" onclick="selectSize(this)">L</button>
+          <button class="size-btn" onclick="selectSize(this)">XL</button>
+          <button class="size-btn" onclick="selectSize(this)">XXL</button>
+        </div>
+        <div class="size-link">
+          <i class="fa fa-ruler-horizontal"></i> Size Measurement Details
+        </div>
+
+        <!-- Stock -->
+        <div class="stock-row">In Stock : <span>3</span></div>
+
+        <!-- Quantity -->
+        <div class="qty-row">
+          <span class="qty-label">Quantity :</span>
+          <div class="qty-ctrl">
+            <button class="qty-btn" onclick="changeQty(-1)"><i class="fa fa-minus" style="font-size:12px;"></i></button>
+            <input class="qty-input" type="text" id="qtyInput" value="1" readonly/>
+            <button class="qty-btn" onclick="changeQty(1)"><i class="fa fa-plus" style="font-size:12px;"></i></button>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-row">
+          <button class="btn-add-cart" onclick="addToCart()">ADD TO CART</button>
+          <button class="btn-buy-now">BUY NOW</button>
+        </div>
+
+        <!-- Seller / Category / Share -->
+        <div class="product-meta-bottom">
+          <div class="left">
+            <div>Seller Product SKU : <span>584705</span></div>
+            <div>Category : <a href="#">Ethnic Set (2 &amp; 3 Pcs)</a></div>
+          </div>
+          <div class="share-col">
+            <div class="share-label">Share With Social Media</div>
+            <div class="share-icons">
+              <a href="#" class="share-icon share-fb"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="share-icon share-x"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" class="share-icon share-wa"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /info col -->
+    </div><!-- /row -->
+
+    <!-- â”€â”€ DESCRIPTION TABS â”€â”€ -->
+    <div class="tabs-section mt-4">
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab(this,'desc')">Description</button>
+        <button class="tab-btn" onclick="switchTab(this,'spec')">Specification</button>
+        <button class="tab-btn" onclick="switchTab(this,'return')">Return Policy</button>
+      </div>
+
+      <!-- Description -->
+      <div class="tab-content active" id="tab-desc">
+        <p>Brand: Afia Borka House</p>
+        <p>Fabric: SYNTHETIC</p>
+        <p>Gender: Female</p>
+        <p>Color: Cinnamon</p>
+        <p>Length: <span>Full Length</span></p>
+        <p>Collar / Neck: Round Collar</p>
+        <p>Fit Type: Regular Fit</p>
+        <p>Addition: Screen Print &amp; Karchupi</p>
+        <p>Sleeve: <span>Full Sleeve</span></p>
+        <p>Set: 3 pcs</p>
+        <p class="tab-note">Note: <span>The color is the same as the picture.</span> However, it may slightly differ due to lighting.</p>
+      </div>
+
+      <!-- Specification -->
+      <div class="tab-content" id="tab-spec">
+        <table style="width:100%;border-collapse:collapse;font-size:13.5px;">
+          <tr style="border-bottom:1px solid #f0f0f0;">
+            <td style="padding:8px 12px;color:#777;width:180px;">Brand</td>
+            <td style="padding:8px 12px;color:#333;font-weight:600;">Afia Borka House</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
+            <td style="padding:8px 12px;color:#777;">Fabric</td>
+            <td style="padding:8px 12px;color:#333;">Synthetic</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;">
+            <td style="padding:8px 12px;color:#777;">Fit Type</td>
+            <td style="padding:8px 12px;color:#333;">Regular Fit</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;background:#fafafa;">
+            <td style="padding:8px 12px;color:#777;">Sleeve</td>
+            <td style="padding:8px 12px;color:#333;">Full Sleeve</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0f0f0;">
+            <td style="padding:8px 12px;color:#777;">Occasion</td>
+            <td style="padding:8px 12px;color:#333;">Casual / Festive</td>
+          </tr>
+          <tr style="background:#fafafa;">
+            <td style="padding:8px 12px;color:#777;">Set Contents</td>
+            <td style="padding:8px 12px;color:#333;">3 Pcs (Top + Bottom + Dupatta)</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Return Policy -->
+      <div class="tab-content" id="tab-return">
+        <p style="font-weight:700;color:#1a1a2e;margin-bottom:10px;">15 Days Replacement Policy</p>
+        <p>Afia Borka House offers a <span>15-day replacement policy</span> only for Afia Borka House manufacture products.</p>
+        <p>Products can be replaced if received in a defective or damaged condition. Please contact our customer support within 15 days of receiving the product.</p>
+        <p>Items must be unused, unwashed, and in their original packaging with all tags intact.</p>
+        <p style="color:#e63946;font-size:13px;margin-top:12px;">Note: Marketplace seller products follow the individual seller's return/replacement policy.</p>
+      </div>
+    </div>
+
+    <!-- â”€â”€ BENEFITS + RECENTLY VIEWED â”€â”€ -->
+    <div class="benefits-row">
+
+      <!-- Benefits -->
+      <div class="benefits-card">
+        <div class="benefit-item">
+          <div class="benefit-icon" style="background:#e8f5e9;"><i class="fa fa-truck" style="color:#2e7d32;"></i></div>
+          <div class="benefit-text">Free shipping inside dhaka city only for <strong>Afia Borka House</strong> products</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon" style="background:#e3f2fd;"><i class="fa fa-motorcycle" style="color:#1565c0;"></i></div>
+          <div class="benefit-text">Home delivery all over Bangladesh</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon" style="background:#fff3e0;"><i class="fa fa-credit-card" style="color:#e65100;"></i></div>
+          <div class="benefit-text">Various payment methods</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon" style="background:#f3e5f5;"><i class="fa fa-rotate-left" style="color:#7b1fa2;"></i></div>
+          <div class="benefit-text"><strong>15 Days</strong> replacement policy only for <strong>Afia Borka House</strong> manufacture products</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon" style="background:#e8f5e9;"><i class="fa fa-headset" style="color:#2e7d32;"></i></div>
+          <div class="benefit-text">Dedicated Customer Support</div>
+        </div>
+        <div class="benefit-item" style="margin-bottom:0;">
+          <div class="benefit-icon" style="background:#e0f2f1;"><i class="fa fa-shield-halved" style="color:#00695c;"></i></div>
+          <div class="benefit-text">Verified and Trusted Sellers</div>
+        </div>
+      </div>
+
+      <!-- Recently Viewed -->
+      <div class="recently-viewed-card">
+        <h6>Recently Viewed</h6>
+        <div class="rv-empty">No recently viewed items</div>
+      </div>
+
+    </div><!-- /benefits-row -->
+
+    <!-- â”€â”€ RELATED PRODUCTS SLIDER â”€â”€ -->
+    <div class="related-section">
+      <div class="related-header">
+        <h5>Related Product</h5>
+        <a href="#" class="see-more-link">See More <i class="fa fa-arrow-right"></i></a>
+      </div>
+
+      <div class="related-slider-wrap">
+        <button class="slider-arrow prev" onclick="slideRel(-1)"><i class="fa fa-chevron-left"></i></button>
+        <div class="related-track-outer">
+          <div class="related-track" id="relTrack">
+
+            <!-- Card 1 -->
+            <div class="rel-card">
+              <div class="rel-card-inner">
+                <div class="rel-img-wrap">
+                  <img src="3pcs.png" alt="Womens Ethnic 3 Pcs" loading="lazy"
+                       onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=260&h=390&fit=crop'"/>
+                  <span class="badge-new-rel">New</span>
+                  <span class="color-dot-rel" style="background:#b35a1f;"></span>
+                </div>
+                <div class="rel-info">
+                  <div class="rel-price">Tk. 6690</div>
+                  <div class="rel-name">Womens Ethnic 3 Pcs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="rel-card">
+              <div class="rel-card-inner">
+                <div class="rel-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b4d43?w=260&h=390&fit=crop" alt="" loading="lazy"/>
+                  <span class="badge-new-rel">New</span>
+                  <span class="color-dot-rel" style="background:#2e7d32;"></span>
+                </div>
+                <div class="rel-info">
+                  <div class="rel-price">Tk. 5990</div>
+                  <div class="rel-name">Womens Ethnic 3 Pcs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="rel-card">
+              <div class="rel-card-inner">
+                <div class="rel-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=260&h=390&fit=crop" alt="" loading="lazy"/>
+                  <span class="badge-new-rel">New</span>
+                </div>
+                <div class="rel-info">
+                  <div class="rel-price">Tk. 4690</div>
+                  <div class="rel-name">Womens Ethnic 3 Pcs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="rel-card">
+              <div class="rel-card-inner">
+                <div class="rel-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=260&h=390&fit=crop" alt="" loading="lazy"/>
+                  <span class="badge-new-rel">New</span>
+                </div>
+                <div class="rel-info">
+                  <div class="rel-price">Tk. 5490</div>
+                  <div class="rel-name">Womens Ethnic 3 Pcs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="rel-card">
+              <div class="rel-card-inner">
+                <div class="rel-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=260&h=390&fit=crop" alt="" loading="lazy"/>
+                  <span class="badge-new-rel">New</span>
+                </div>
+                <div class="rel-info">
+                  <div class="rel-price">Tk. 5490</div>
+                  <div class="rel-name">Womens Ethnic 3 Pcs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="rel-card">
+              <div class="rel-card-inner">
+                <div class="rel-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=260&h=390&fit=crop" alt="" loading="lazy"/>
+                  <span class="badge-new-rel">New</span>
+                </div>
+                <div class="rel-info">
+                  <div class="rel-price">Tk. 3490</div>
+                  <div class="rel-name">Womens 2 Pcs Set - Regular Fit</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="rel-card">
+              <div class="rel-card-inner">
+                <div class="rel-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=260&h=390&fit=crop" alt="" loading="lazy"/>
+                  <span class="badge-new-rel">New</span>
+                </div>
+                <div class="rel-info">
+                  <div class="rel-price">Tk. 4290</div>
+                  <div class="rel-name">Womens Ethnic 3 Pcs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="rel-card">
+              <div class="rel-card-inner">
+                <div class="rel-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=260&h=390&fit=crop" alt="" loading="lazy"/>
+                  <span class="badge-new-rel">New</span>
+                </div>
+                <div class="rel-info">
+                  <div class="rel-price">Tk. 6290</div>
+                  <div class="rel-name">Womens Ethnic 3 Pcs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="rel-card">
+              <div class="rel-card-inner">
+                <div class="rel-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=260&h=390&fit=crop" alt="" loading="lazy"/>
+                  <span class="badge-new-rel">New</span>
+                </div>
+                <div class="rel-info">
+                  <div class="rel-price">Tk. 5790</div>
+                  <div class="rel-name">Womens Ethnic 3 Pcs</div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /related-track -->
+        </div>
+        <button class="slider-arrow next" onclick="slideRel(1)"><i class="fa fa-chevron-right"></i></button>
+      </div>
+
+      <!-- Dots -->
+      <div class="slider-dots" id="relDots"></div>
+
+    </div><!-- /related-section -->
+
+  </div><!-- /container -->
+</div><!-- /product-page -->
+
+<!-- TAGLINE -->
+<div class="tagline-strip">
+  Explore Trendy Fashion Finds at Online Shopping BD Marketplace &ndash; Your Ultimate Fashion &amp; Lifestyle destination in Bangladesh! <a href="#">Shop Now!</a>
+</div>
+
+<!-- FOOTER (copied from index for consistent layout) -->
+<footer style="border-top:1px solid #e5e7eb;background:#fff;margin-top:24px;">
+  <div class="container" style="max-width:1260px;padding:24px 20px 16px;">
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Contact Us</h6>
+        <div class="d-flex mb-2 small text-muted">
+          <i class="bi bi-geo-alt-fill me-2" style="color:#1a5dc8;font-size:14px;margin-top:2px;"></i>
+          <span>Avenue #02, Road #14, House No #966, Mirpur DOHS, DHAKA-1216, Bangladesh.</span>
+        </div>
+        <div class="d-flex mb-2 small text-muted">
+          <i class="bi bi-telephone-fill me-2" style="color:#1a5dc8;font-size:14px;margin-top:2px;"></i>
+          <span>+88-01885-998899</span>
+        </div>
+        <div class="d-flex mb-2 small text-muted">
+          <i class="bi bi-envelope-fill me-2" style="color:#1a5dc8;font-size:14px;margin-top:2px;"></i>
+          <a href="mailto:support@afiaborkahouse.com" style="color:#2563eb;text-decoration:none;">support@afiaborkahouse.com</a>
+        </div>
+        <div class="small text-muted mt-1">
+          DBID Number: <strong>204425796</strong><br/>
+          D-U-N-S Number: <strong>731962671</strong>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Company</h6>
+        <ul class="list-unstyled mb-0 small">
+          <li class="mb-1"><a href="blog.html" style="color:#6b7280;text-decoration:none;">Blogs</a></li>
+          <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Outlets</a></li>
+          <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Careers</a></li>
+          <li class="mb-1"><a href="about.html" style="color:#6b7280;text-decoration:none;">About Us</a></li>
+          <li class="mb-1"><a href="contact.html" style="color:#6b7280;text-decoration:none;">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Customer</h6>
+        <ul class="list-unstyled mb-0 small">
+          <li class="mb-1"><a href="login.html" style="color:#6b7280;text-decoration:none;">Login</a></li>
+          <li class="mb-1"><a href="register.html" style="color:#6b7280;text-decoration:none;">Register</a></li>
+          <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Brands</a></li>
+          <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Best Deals</a></li>
+          <li class="mb-1"><a href="#" style="color:#6b7280;text-decoration:none;">Marketplace</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Help</h6>
+        <ul class="list-unstyled mb-0 small">
+          <li class="mb-1"><a href="faq.html" style="color:#6b7280;text-decoration:none;">FAQs</a></li>
+          <li class="mb-1"><a href="privacy-policy.html" style="color:#6b7280;text-decoration:none;">Privacy Policy</a></li>
+          <li class="mb-1"><a href="cookies-policy.html" style="color:#6b7280;text-decoration:none;">Cookies Policy</a></li>
+          <li class="mb-1"><a href="terms.html" style="color:#6b7280;text-decoration:none;">Terms &amp; Conditions</a></li>
+          <li class="mb-1"><a href="replacement.html" style="color:#6b7280;text-decoration:none;">Replacement Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Social Media for Afia Borka House</h6>
+        <div class="d-flex flex-wrap gap-2 mb-2">
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:#1877f2;color:#fff;"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:#0077b5;color:#fff;"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:#ff0000;color:#fff;"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-tiktok"></i></a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-twitter-x"></i></a>
+        </div>
+
+        <h6 class="fw-semibold mb-2" style="font-size:13px;color:#111827;">Social Media for Afia Borka House</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:#1877f2;color:#fff;"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:#ff0000;color:#fff;"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:30px;height:30px;background:#000;color:#fff;"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center py-2 small text-muted" style="border-top:1px solid #e5e7eb;">
+    &copy; 2026 Afia Borka House All Rights Reserved
+  </div>
+</footer>
+
+<button class="float-chat" title="Chat"><i class="bi bi-chat-dots-fill"></i></button>
+
+<nav class="mobile-bottom-nav">
+  <div class="mob-nav-items">
+    <a href="index.html" class="mob-nav-item"><i class="bi bi-house-fill"></i><span>Home</span></a>
+    <a href="category.html" class="mob-nav-item"><i class="bi bi-grid-fill"></i><span>Category</span></a>
+    <a href="product.html" class="mob-nav-center"><div class="eid-circle"><i class="bi bi-stars"></i></div><span class="eid-circle-label">Eid Fest</span></a>
+    <a href="#" class="mob-nav-item"><i class="bi bi-cart-fill"></i><span>Cart</span></a>
+    <a href="#" class="mob-nav-item" onclick="openMobAccount(event)"><i class="bi bi-person-fill"></i><span>Account</span></a>
+  </div>
+</nav>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Filter tabs
+  document.querySelectorAll('.filter-tabs').forEach(g=>{
+    g.querySelectorAll('.ftab').forEach(b=>{
+      b.addEventListener('click',()=>{g.querySelectorAll('.ftab').forEach(x=>x.classList.remove('active'));b.classList.add('active');});
+    });
+  });
+
+  // Product grid scroll
+  function scrollProd(id,dir){
+    const el=document.getElementById(id);if(!el)return;
+    const cw=el.querySelector('.prod-card')?.offsetWidth||180;
+    el.scrollBy({left:dir*(cw+10)*2,behavior:'smooth'});
+  }
+
+  // Shop By Category dropdown
+  let dropOpen=false;
+  function toggleCatDropdown(){
+    dropOpen=!dropOpen;
+    document.getElementById('catDropdown').classList.toggle('open',dropOpen);
+    document.getElementById('shopCatBtn').classList.toggle('open',dropOpen);
+    if(dropOpen) showPanel('clothing',document.querySelector('.cat-list-item'));
+  }
+  document.addEventListener('click',e=>{
+    if(dropOpen&&!e.target.closest('.cat-dropdown-wrap')){
+      dropOpen=false;
+      document.getElementById('catDropdown').classList.remove('open');
+      document.getElementById('shopCatBtn').classList.remove('open');
+    }
+  });
+  function showPanel(id,item){
+    document.querySelectorAll('.cat-list-item').forEach(i=>i.classList.remove('active'));
+    if(item)item.classList.add('active');
+    document.querySelectorAll('.cat-sub-panel').forEach(p=>p.classList.remove('active'));
+    const p=document.getElementById('panel-'+id);if(p)p.classList.add('active');
+  }
+
+  // Mobile nav active
+  document.querySelectorAll('.mob-nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.mob-nav-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+    });
+  });
+
+  // â”€â”€ Mobile nav toggle (hamburger) â”€â”€
+  function toggleMobileNav(){
+    const nav=document.getElementById('mobileNavDrawer');
+    if(nav) nav.classList.toggle('open');
+  }
+
+  // â”€â”€ Image gallery: switch main image â”€â”€
+  function switchImg(thumb, src, fallback){
+    const main=document.getElementById('mainImg');
+    if(!main) return;
+    main.src=src;
+    if(fallback) main.onerror=function(){ this.src=fallback; this.onerror=null; };
+    document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+
+  // â”€â”€ Wishlist toggle â”€â”€
+  function toggleWish(){
+    const btn=document.getElementById('wishBtn');
+    if(!btn) return;
+    btn.classList.toggle('active');
+    const icon=btn.querySelector('i');
+    if(icon){
+      icon.classList.toggle('fa-regular');
+      icon.classList.toggle('fa-solid');
+    }
+  }
+
+  // â”€â”€ Size button selection â”€â”€
+  function selectSize(btn){
+    document.querySelectorAll('.size-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  // â”€â”€ Quantity control â”€â”€
+  const MAX_QTY=3; // matches stock
+  function changeQty(delta){
+    const inp=document.getElementById('qtyInput');
+    if(!inp) return;
+    let val=parseInt(inp.value)||1;
+    val=Math.max(1,Math.min(MAX_QTY, val+delta));
+    inp.value=val;
+  }
+
+  // â”€â”€ Add to Cart â”€â”€
+  function addToCart(){
+    const size=document.querySelector('.size-btn.active')?.textContent||'M';
+    const qty=parseInt(document.getElementById('qtyInput')?.value)||1;
+    // Visual feedback
+    const btn=document.querySelector('.btn-add-cart');
+    if(btn){
+      const orig=btn.textContent;
+      btn.textContent='âœ“ ADDED!';
+      btn.style.background='#2e7d32';
+      setTimeout(()=>{ btn.textContent=orig; btn.style.background=''; },1800);
+    }
+    // Update cart badge
+    const badge=document.querySelector('.cart-badge');
+    if(badge) badge.textContent=parseInt(badge.textContent||0)+qty;
+  }
+
+  // â”€â”€ Tab switcher â”€â”€
+  function switchTab(btn, id){
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+    btn.classList.add('active');
+    const content=document.getElementById('tab-'+id);
+    if(content) content.classList.add('active');
+  }
+
+  // â”€â”€ Related products slider â”€â”€
+  (function(){
+    const track=document.getElementById('relTrack');
+    const dotsWrap=document.getElementById('relDots');
+    if(!track||!dotsWrap) return;
+
+    const cards=track.querySelectorAll('.rel-card');
+    const total=cards.length;
+    let visibleCount=6;
+    let currentIndex=0;
+    let totalPages=0;
+
+    function getVisible(){
+      const w=window.innerWidth;
+      if(w<=575) return 2;
+      if(w<=767) return 3;
+      if(w<=991) return 4;
+      return 6;
+    }
+
+    function buildDots(){
+      dotsWrap.innerHTML='';
+      visibleCount=getVisible();
+      totalPages=Math.ceil(total/visibleCount);
+      if(currentIndex>=totalPages) currentIndex=totalPages-1;
+      for(let i=0;i<totalPages;i++){
+        const d=document.createElement('span');
+        d.className='slider-dot'+(i===currentIndex?' active':'');
+        d.addEventListener('click',()=>goTo(i));
+        dotsWrap.appendChild(d);
+      }
+    }
+
+    function goTo(idx){
+      visibleCount=getVisible();
+      totalPages=Math.ceil(total/visibleCount);
+      currentIndex=Math.max(0,Math.min(totalPages-1,idx));
+      const cardW=track.querySelector('.rel-card')?.offsetWidth||0;
+      const gap=0;
+      track.style.transform='translateX(-'+(currentIndex*visibleCount*(cardW+gap))+'px)';
+      dotsWrap.querySelectorAll('.slider-dot').forEach((d,i)=>{
+        d.classList.toggle('active',i===currentIndex);
+      });
+    }
+
+    window.slideRel=function(dir){ goTo(currentIndex+dir); };
+
+    buildDots();
+    window.addEventListener('resize',()=>{ buildDots(); goTo(currentIndex); });
+  })();
+</script>
+
+<!-- Mobile Account Sidebar -->
+<div class="mob-account-overlay" id="mobAccountOverlay" onclick="closeMobAccount()"></div>
+<div class="mob-account-sidebar" id="mobAccountSidebar">
+  <div class="mob-account-header">
+    <h5 class="mb-0">My Account</h5>
+    <button class="mob-account-close" onclick="closeMobAccount()"><i class="bi bi-x"></i></button>
+  </div>
+  <div class="mob-account-user">
+    <div class="user-avatar"><i class="fa-regular fa-user"></i></div>
+    <div class="user-name">User Account</div>
+  </div>
+  <div class="mob-account-links">
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="#">Order Tracking</a>
+  </div>
+</div>
+
+
+<script>
+  function openMobAccount(e) {
+    if(e) e.preventDefault();
+    document.getElementById('mobAccountOverlay').classList.add('show');
+    document.getElementById('mobAccountSidebar').classList.add('open');
+  }
+  function closeMobAccount() {
+    document.getElementById('mobAccountOverlay').classList.remove('show');
+    document.getElementById('mobAccountSidebar').classList.remove('open');
+  }
+</script>
+
+</body>
+</html>
